@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【6月限定】エルムクリニック神戸院キャンペーン｜美容皮膚科・医療アートメイク</title>
+    <meta name="description" content="年間症例2万件超！開院14年の実績と信頼。6月限定キャンペーン実施中。ヒアルロン酸・ボトックス・アートメイクなど人気施術が特別価格。無料カウンセリング受付中">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .hero h1 {
+            font-size: clamp(24px, 5vw, 42px);
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(16px, 3vw, 20px);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .stat-number {
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: 700;
+            color: #ffd700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(255,107,107,0.3);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255,107,107,0.4);
+        }
+        
+        /* セクション共通スタイル */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: clamp(28px, 5vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        /* キャンペーンセクション */
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .campaign-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .campaign-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .campaign-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            z-index: 1;
+        }
+        
+        .campaign-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .campaign-content {
+            padding: 25px;
+        }
+        
+        .campaign-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .campaign-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+        
+        .campaign-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .campaign-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .campaign-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102,126,234,0.3);
+        }
+        
+        /* スペシャルキャンペーン */
+        .special-campaign {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .special-campaign::before {
+            content: '★ SPECIAL ★';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 30px 60px;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 12px;
+        }
+        
+        .special-title {
+            font-size: clamp(24px, 5vw, 32px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .special-subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        /* 診療の流れ */
+        .flow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .flow-step {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .step-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .step-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Q&A */
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            background: #f8f9fa;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            color: #2c3e50;
+            border: none;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 200px;
+        }
+        
+        .faq-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-icon.active {
+            transform: rotate(180deg);
+        }
+        
+        /* CTAセクション */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(24px, 5vw, 32px);
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* 固定CTAボタン（スマホ用） */
+        .fixed-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .fixed-cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(255,107,107,0.4);
+            transition: all 0.3s ease;
+        }
+        
+        /* クリニック情報 */
+        .clinic-info {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .clinic-info h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .info-content h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .info-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 15px 30px;
+            }
+            
+            .section {
+                padding: 40px 15px;
+            }
+            
+            .campaign-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .campaign-card {
+                margin-bottom: 20px;
+            }
+            
+            .special-campaign {
+                padding: 30px 20px;
+                margin-bottom: 40px;
+            }
+            
+            .flow-steps {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .fixed-cta {
+                display: block;
+            }
+            
+            .clinic-info {
+                padding: 30px 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        /* アニメーション */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* タイマー表示 */
+        .countdown {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .countdown-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .countdown-timer {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">6月限定キャンペーン開催中</div>
+            <h1>年間症例2万件超！<br>神戸で選ばれる美容皮膚科</h1>
+            <p class="hero-subtitle">開院14年の実績と信頼で、あなたの美しさをサポート</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">14年</span>
+                    <span class="stat-label">開院実績</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2万件+</span>
+                    <span class="stat-label">年間症例数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">7000件+</span>
+                    <span class="stat-label">アートメイク実績</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.6点</span>
+                    <span class="stat-label">口コミ評価</span>
+                </div>
+            </div>
+            
+            <div class="countdown">
+                <div class="countdown-text">キャンペーン終了まで</div>
+                <div class="countdown-timer" id="countdown">あと24日</div>
+            </div>
+            
+            <a href="#contact" class="cta-button">無料カウンセリング予約</a>
+        </div>
+    </section>
+    
+    <!-- 6月キャンペーン -->
+    <section class="section">
+        <h2 class="section-title">6月限定キャンペーン</h2>
+        <p class="section-subtitle">人気施術が特別価格でご提供。この機会をお見逃しなく！</p>
+        
+        <div class="campaign-grid">
+            <div class="campaign-card fade-in">
+                <div class="campaign-tag">6月1日～</div>
+                <img src="imgs/kobe6_1-13.jpg" alt="ハイドラフェイシャル" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">ハイドラフェイシャル</h3>
+                    <div class="campaign-price">初回 ¥9,800 <small style="text-decoration: line-through; color: #999;">¥16,500</small></div>
+                    <p class="campaign-description">毛穴の汚れと古い角質を一掃。即効性の高い美肌治療で、施術直後から肌の変化を実感していただけます。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <div class="campaign-tag">6月2日～</div>
+                <img src="imgs/kobe6_2-14.jpg" alt="高濃度ビタミンC点滴" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">高濃度ビタミンC点滴</h3>
+                    <div class="campaign-price">初回 ¥7,700 <small style="text-decoration: line-through; color: #999;">¥11,000</small></div>
+                    <p class="campaign-description">美白・美肌・アンチエイジング効果。内側から輝く美しさを手に入れる人気の点滴治療です。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <div class="campaign-tag">6月4日～</div>
+                <img src="imgs/kobe6_4-16.jpg" alt="アートメイク" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">眉アートメイク</h3>
+                    <div class="campaign-price">モニター価格 ¥59,800 <small style="text-decoration: line-through; color: #999;">¥89,600</small></div>
+                    <p class="campaign-description">自然で美しい眉毛を実現。朝のメイク時間短縮にも効果的。医療従事者による安全な施術です。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <div class="campaign-tag">6月7日～</div>
+                <img src="imgs/kobe6_7-23.jpg" alt="ピコレーザー" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">ピコトーニング</h3>
+                    <div class="campaign-price">トライアル ¥9,900 <small style="text-decoration: line-through; color: #999;">¥16,500</small></div>
+                    <p class="campaign-description">シミ・くすみ・肝斑に効果的。ダウンタイムが少なく、お肌に優しい最新レーザー治療です。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <div class="campaign-tag">6月8日～</div>
+                <img src="imgs/kobe6_8-24.jpg" alt="マッサージピール" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">マッサージピール</h3>
+                    <div class="campaign-price">トライアル ¥8,800 <small style="text-decoration: line-through; color: #999;">¥13,200</small></div>
+                    <p class="campaign-description">コラーゲン生成を促進し、ハリ・ツヤのあるお肌へ。痛みが少なく人気の治療です。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <div class="campaign-tag">6月9日～</div>
+                <img src="imgs/kobe_9_rec_1.jpg" alt="フォトフェイシャル" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">フォトフェイシャル</h3>
+                    <div class="campaign-price">トライアル ¥12,100 <small style="text-decoration: line-through; color: #999;">¥19,800</small></div>
+                    <p class="campaign-description">シミ・そばかす・赤ら顔を同時に改善。肌質改善効果も期待できる光治療です。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- スペシャルキャンペーン -->
+    <section class="section">
+        <div class="special-campaign fade-in">
+            <h2 class="special-title">スペシャルキャンペーン</h2>
+            <p class="special-subtitle">今月だけの特別企画！人気施術の組み合わせプランをご用意</p>
+            
+            <div class="campaign-grid" style="margin-top: 30px;">
+                <div class="campaign-card">
+                    <img src="imgs/kobe6_SP1-10.jpg" alt="ぷるたまヒアルロン酸" class="campaign-image">
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">ぷるたまヒアルロン酸注射</h3>
+                        <div class="campaign-price">¥59,800 <small style="text-decoration: line-through; color: #999;">¥89,600</small></div>
+                        <p class="campaign-description">話題のボライトXCで、内側から輝くような美肌を実現。水光注射とのコンビネーション治療です。</p>
+                        <a href="#contact" class="campaign-button">詳細を見る</a>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <img src="imgs/kobe6_SP2-11.jpg" alt="エルムリフト" class="campaign-image">
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">エルムリフト</h3>
+                        <div class="campaign-price">モニター価格 ¥160,000 <small style="text-decoration: line-through; color: #999;">¥240,000</small></div>
+                        <p class="campaign-description">メスを使わないリフトアップ。糸による自然な引き上げ効果で若々しい印象に。</p>
+                        <a href="#contact" class="campaign-button">詳細を見る</a>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <img src="imgs/kobe6_SP3-12.jpg" alt="サブシジョン+ジュベルック" class="campaign-image">
+                    <div class="campaign-content">
+                        <h3 class="campaign-title">サブシジョン+ジュベルック</h3>
+                        <div class="campaign-price">モニター価格 ¥198,000 <small style="text-decoration: line-through; color: #999;">¥298,000</small></div>
+                        <p class="campaign-description">ニキビ跡・毛穴の根本治療。サブシジョンとジュベルックの組み合わせで効果的な治療を。</p>
+                        <a href="#contact" class="campaign-button">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- おすすめ施術 -->
+    <section class="section">
+        <h2 class="section-title">おすすめ施術</h2>
+        <p class="section-subtitle">患者様に特に人気の高い施術をご紹介</p>
+        
+        <div class="campaign-grid">
+            <div class="campaign-card fade-in">
+                <img src="imgs/kobe_7_recommend_1-1024x1024.jpg" alt="ハイドラフェイシャル" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">ハイドラフェイシャル</h3>
+                    <div class="campaign-price">¥16,500</div>
+                    <p class="campaign-description">毛穴の汚れを徹底除去し、美容成分を導入。即効性の高い美肌治療として大変人気です。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <img src="imgs/kobe_7_recommend_2-1024x1024.jpg" alt="マッサージピール" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">マッサージピール</h3>
+                    <div class="campaign-price">¥13,200</div>
+                    <p class="campaign-description">コラーゲン生成を促進し、ハリ・弾力のある美肌へ。痛みが少なく安全性の高い治療です。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <img src="imgs/kobe_7_recommend_3-1024x1024.jpg" alt="ほくろ・いぼ除去" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">ほくろ・いぼ除去</h3>
+                    <div class="campaign-price">¥5,500～</div>
+                    <p class="campaign-description">CO2レーザーによる安全で確実な除去。跡が残りにくく、美しい仕上がりを実現します。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 診療の流れ -->
+    <section class="section">
+        <h2 class="section-title">診療の流れ</h2>
+        <p class="section-subtitle">初回から施術まで、安心してお受けいただけるよう丁寧にサポートします</p>
+        
+        <div class="flow-steps">
+            <div class="flow-step fade-in">
+                <div class="step-number">1</div>
+                <h3 class="step-title">カウンセリング予約</h3>
+                <p class="step-description">お電話またはWebからご予約いただけます。完全予約制のため、お待たせすることなくご案内できます。</p>
+            </div>
+            
+            <div class="flow-step fade-in">
+                <div class="step-number">2</div>
+                <h3 class="step-title">ご来院・受付</h3>
+                <p class="step-description">ご予約時間にご来院ください。カルテ作成後、お悩みやご希望を詳しくお聞かせください。</p>
+            </div>
+            
+            <div class="flow-step fade-in">
+                <div class="step-number">3</div>
+                <h3 class="step-title">医師カウンセリング</h3>
+                <p class="step-description">経験豊富な医師が丁寧にカウンセリング。お肌の状態を診察し、最適な治療プランをご提案します。</p>
+            </div>
+            
+            <div class="flow-step fade-in">
+                <div class="step-number">4</div>
+                <h3 class="step-title">お申込み・お支払い</h3>
+                <p class="step-description">治療内容にご納得いただけましたら、同意書記入とお支払いを済ませていただきます。</p>
+            </div>
+            
+            <div class="flow-step fade-in">
+                <div class="step-number">5</div>
+                <h3 class="step-title">施術実施</h3>
+                <p class="step-description">完全個室にて、痛みに配慮した丁寧な施術を行います。リラックスしてお受けください。</p>
+            </div>
+            
+            <div class="flow-step fade-in">
+                <div class="step-number">6</div>
+                <h3 class="step-title">アフターケア</h3>
+                <p class="step-description">施術後のケア方法をご説明。ご不安な点があれば、いつでもお気軽にご相談ください。</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- よくある質問 -->
+    <section class="section">
+        <h2 class="section-title">よくある質問</h2>
+        <p class="section-subtitle">患者様からよくいただくご質問にお答えします</p>
+        
+        <div class="faq-item fade-in">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                初回カウンセリングは本当に無料ですか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                はい、初回カウンセリングは完全無料です。医師による丁寧な診察とご相談を無料でお受けいただけます。治療を強制することは一切ございませんので、お気軽にお越しください。
+            </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                施術の痛みはありますか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                施術の種類により異なりますが、当院では痛みを最小限に抑える工夫をしております。表面麻酔や冷却機能付きの機器を使用し、患者様が快適に施術をお受けいただけるよう配慮しています。
+            </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                ダウンタイムはどのくらいですか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                施術により異なりますが、多くの治療でダウンタイムは短く設定されています。ハイドラフェイシャルやフォトフェイシャルなどは当日からメイクが可能です。詳細は各施術ページをご確認ください。
+            </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                支払い方法を教えてください
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                現金一括払い、各種クレジットカード、医療ローンをご利用いただけます。医療ローンは月々3,000円からの分割払いが可能です。詳しくはスタッフまでお尋ねください。
+            </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                未成年でも施術を受けられますか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                18歳未満の方は保護者同伴または同意書が必要です。18歳・19歳の方は保護者の同意書をお持ちください。同意書は当院HPからダウンロードできます。
+            </div>
+        </div>
+        
+        <div class="faq-item fade-in">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                男性でも施術を受けられますか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                もちろんです。当院では男性の患者様も多くいらっしゃいます。男性向けのメニューもご用意しており、スタッフ一同、丁寧にサポートさせていただきます。
+            </div>
+        </div>
+    </section>
+    
+    <!-- クリニック情報 -->
+    <section class="section">
+        <div class="clinic-info fade-in">
+            <h3>エルムクリニック神戸院について</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h4>アクセス</h4>
+                        <p>〒650-0011<br>神戸市中央区下山手通3-1-21 東栄ビル4階<br>阪急電鉄「神戸三宮駅」より徒歩5分</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">🕐</div>
+                    <div class="info-content">
+                        <h4>営業時間</h4>
+                        <p>9:00～18:00<br>定休日：日曜日・月曜日<br>完全予約制</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">👩‍⚕️</div>
+                    <div class="info-content">
+                        <h4>院長</h4>
+                        <p>七里 阿寿美（しちり あすみ）<br>神戸大学医学部卒業<br>小児科専門医・美容皮膚科医</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-content">
+                        <h4>お問い合わせ</h4>
+                        <p>TEL: 078-335-6025<br>Webからの予約も24時間受付中</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA セクション -->
+    <section class="cta-section" id="contact">
+        <h2>まずは無料カウンセリングから</h2>
+        <p>あなたのお悩みに最適な治療プランをご提案いたします。<br>経験豊富な医師が丁寧にカウンセリングを行いますので、お気軽にご相談ください。</p>
+        <a href="tel:078-335-6025" class="cta-button">078-335-6025</a>
+        <div style="margin: 20px 0;">または</div>
+        <a href="#" class="cta-button">Web予約はこちら</a>
+    </section>
+    
+    <!-- 固定CTAボタン（スマホ用） -->
+    <div class="fixed-cta">
+        <a href="tel:078-335-6025" class="fixed-cta-button">
+            📞 今すぐ電話で予約
+        </a>
+    </div>
+    
+    <script>
+        // FAQトグル機能
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.classList.remove('active');
+            } else {
+                answer.classList.add('active');
+                icon.classList.add('active');
+            }
+        }
+        
+        // スクロールアニメーション
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight * 0.8) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', handleScrollAnimation);
+        handleScrollAnimation(); // 初回実行
+        
+        // カウントダウンタイマー
+        function updateCountdown() {
+            const endDate = new Date();
+            endDate.setMonth(endDate.getMonth() + 1);
+            endDate.setDate(0); // 月末
+            
+            const now = new Date();
+            const timeLeft = endDate - now;
+            const daysLeft = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
+            
+            document.getElementById('countdown').textContent = `あと${daysLeft}日`;
+        }
+        
+        updateCountdown();
+        
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // 固定CTAボタンの表示制御
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const fixedCta = document.querySelector('.fixed-cta');
+            
+            if (scrolled > 500) {
+                fixedCta.style.display = 'block';
+            } else {
+                fixedCta.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 
