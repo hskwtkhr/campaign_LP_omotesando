@@ -101,14 +101,37 @@
             transition: transform 0.3s ease;
         }
         
+        .mobile-br {
+            display: none;
+        }
+        
         @media (max-width: 768px) {
             .star-images {
                 gap: 5px;
-                margin: 20px -10px;
+                margin: 20px 0;
+                width: 100%;
+                padding: 0 10px;
             }
             
             .star-image {
                 max-width: none;
+                width: 100%;
+            }
+            
+            .hero-subtitle {
+                line-height: 1.8;
+            }
+            
+            .section-subtitle {
+                line-height: 1.8;
+            }
+            
+            .special-campaign::before {
+                right: 100px;
+            }
+            
+            .mobile-br {
+                display: block;
             }
         }
         
@@ -709,7 +732,7 @@
     <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/ELM15.jpg'); background-size: cover; background-position: center;">
         <div class="hero-content">
             <h1 style="font-family: 'Noto Serif JP', serif;">神戸で選ばれる美容皮膚科<br>エルムクリニック神戸院</h1>
-            <p class="hero-subtitle">より自然に美しく。鏡を見るのが嬉しくなる毎日を。</p>
+            <p class="hero-subtitle">より自然に美しく。<br class="mobile-br">鏡を見るのが嬉しくなる毎日を。</p>
             
             <div class="star-images">
                 <img src="imgs/star_1.png" alt="エルムクリニック神戸院 評価スター1" class="star-image">
@@ -724,7 +747,7 @@
     <!-- 6月キャンペーン -->
     <section class="section">
         <h2 class="section-title">6月限定キャンペーン</h2>
-        <p class="section-subtitle">人気施術が特別価格でご提供。この機会をお見逃しなく！</p>
+        <p class="section-subtitle">人気施術が特別価格でご提供。<br class="mobile-br">この機会をお見逃しなく！</p>
         
         <div class="campaign-grid">
             <div class="campaign-card fade-in">
