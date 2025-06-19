@@ -93,6 +93,29 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
         
+        .laurel-design {
+            position: relative;
+            background: rgba(255,255,255,0.15);
+            border: 2px solid #ffd700;
+        }
+        
+        .laurel-design::before {
+            content: '🏆';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            background: rgba(255,215,0,0.9);
+            padding: 5px 10px;
+            border-radius: 50%;
+        }
+        
+        .laurel-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+        
         .stat-number {
             font-size: clamp(24px, 5vw, 36px);
             font-weight: 700;
@@ -197,8 +220,9 @@
         
         .campaign-image {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: 250px;
+            object-fit: contain;
+            background: #f8f9fa;
         }
         
         .campaign-content {
@@ -300,17 +324,29 @@
         }
         
         .step-number {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             background: linear-gradient(45deg, #667eea, #764ba2);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 30px;
             font-weight: 700;
             margin: 0 auto 20px;
+            position: relative;
+        }
+        
+        .step-icon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 24px;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .step-title {
@@ -477,6 +513,64 @@
             line-height: 1.5;
         }
         
+        /* 院長紹介 */
+        .doctor-intro {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .doctor-image {
+            flex-shrink: 0;
+        }
+        
+        .doctor-info h4 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .doctor-info ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .doctor-info li {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        .clinic-overview {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .clinic-overview p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        /* マップセクション */
+        .map-section {
+            margin-top: 40px;
+        }
+        
+        .map-section h4 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .map-container {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
         /* レスポンシブ対応 */
         @media (max-width: 768px) {
             .hero {
@@ -518,6 +612,16 @@
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+            
+            .doctor-intro {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .doctor-image {
+                align-self: center;
+            }
         }
         
         /* アニメーション */
@@ -557,34 +661,37 @@
 </head>
 <body>
     <!-- ヒーローセクション -->
-    <section class="hero">
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/ELM01.jpg'); background-size: cover; background-position: center;">
         <div class="hero-content">
             <div class="hero-badge">6月限定キャンペーン開催中</div>
-            <h1>年間症例2万件超！<br>神戸で選ばれる美容皮膚科</h1>
-            <p class="hero-subtitle">開院14年の実績と信頼で、あなたの美しさをサポート</p>
+            <h1>神戸で選ばれる美容皮膚科<br>エルムクリニック神戸院</h1>
+            <p class="hero-subtitle">開院3周年の実績と信頼で、あなたの美しさをサポート</p>
             
             <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">14年</span>
-                    <span class="stat-label">開院実績</span>
+                <div class="stat-item laurel-design">
+                    <div class="laurel-wrapper">
+                        <span class="stat-number">3年</span>
+                        <span class="stat-label">開院実績</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">2万件+</span>
-                    <span class="stat-label">年間症例数</span>
+                <div class="stat-item laurel-design">
+                    <div class="laurel-wrapper">
+                        <span class="stat-number">2万件+</span>
+                        <span class="stat-label">注入治療実績</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">7000件+</span>
-                    <span class="stat-label">アートメイク実績</span>
+                <div class="stat-item laurel-design">
+                    <div class="laurel-wrapper">
+                        <span class="stat-number">7000件+</span>
+                        <span class="stat-label">アートメイク実績</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">4.6点</span>
-                    <span class="stat-label">口コミ評価</span>
+                <div class="stat-item laurel-design">
+                    <div class="laurel-wrapper">
+                        <span class="stat-number">4.63点</span>
+                        <span class="stat-label">口コミ評価</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="countdown">
-                <div class="countdown-text">キャンペーン終了まで</div>
-                <div class="countdown-timer" id="countdown">あと24日</div>
             </div>
             
             <a href="#contact" class="cta-button">無料カウンセリング予約</a>
@@ -662,6 +769,11 @@
                     <a href="#contact" class="campaign-button">詳細を見る</a>
                 </div>
             </div>
+        </div>
+        
+        <div class="countdown">
+            <div class="countdown-text">キャンペーン終了まで</div>
+            <div class="countdown-timer" id="countdown">あと24日</div>
         </div>
     </section>
     
@@ -750,37 +862,55 @@
         
         <div class="flow-steps">
             <div class="flow-step fade-in">
-                <div class="step-number">1</div>
+                <div class="step-number">
+                    1
+                    <div class="step-icon">📞</div>
+                </div>
                 <h3 class="step-title">カウンセリング予約</h3>
                 <p class="step-description">お電話またはWebからご予約いただけます。完全予約制のため、お待たせすることなくご案内できます。</p>
             </div>
             
             <div class="flow-step fade-in">
-                <div class="step-number">2</div>
+                <div class="step-number">
+                    2
+                    <div class="step-icon">🏥</div>
+                </div>
                 <h3 class="step-title">ご来院・受付</h3>
                 <p class="step-description">ご予約時間にご来院ください。カルテ作成後、お悩みやご希望を詳しくお聞かせください。</p>
             </div>
             
             <div class="flow-step fade-in">
-                <div class="step-number">3</div>
+                <div class="step-number">
+                    3
+                    <div class="step-icon">👩‍⚕️</div>
+                </div>
                 <h3 class="step-title">医師カウンセリング</h3>
                 <p class="step-description">経験豊富な医師が丁寧にカウンセリング。お肌の状態を診察し、最適な治療プランをご提案します。</p>
             </div>
             
             <div class="flow-step fade-in">
-                <div class="step-number">4</div>
+                <div class="step-number">
+                    4
+                    <div class="step-icon">💳</div>
+                </div>
                 <h3 class="step-title">お申込み・お支払い</h3>
                 <p class="step-description">治療内容にご納得いただけましたら、同意書記入とお支払いを済ませていただきます。</p>
             </div>
             
             <div class="flow-step fade-in">
-                <div class="step-number">5</div>
+                <div class="step-number">
+                    5
+                    <div class="step-icon">✨</div>
+                </div>
                 <h3 class="step-title">施術実施</h3>
                 <p class="step-description">完全個室にて、痛みに配慮した丁寧な施術を行います。リラックスしてお受けください。</p>
             </div>
             
             <div class="flow-step fade-in">
-                <div class="step-number">6</div>
+                <div class="step-number">
+                    6
+                    <div class="step-icon">💖</div>
+                </div>
                 <h3 class="step-title">アフターケア</h3>
                 <p class="step-description">施術後のケア方法をご説明。ご不安な点があれば、いつでもお気軽にご相談ください。</p>
             </div>
@@ -857,12 +987,37 @@
     <section class="section">
         <div class="clinic-info fade-in">
             <h3>エルムクリニック神戸院について</h3>
+            
+            <!-- 院長紹介 -->
+            <div class="doctor-intro">
+                <div class="doctor-image">
+                    <img src="imgs/dr_shichiri.jpg" alt="七里 阿寿美院長" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div class="doctor-info">
+                    <h4>院長：七里 阿寿美（しちり あすみ）</h4>
+                    <p>美容のお悩みはひとりひとり違っていて、他人に共感されないことがコンプレックスに繋がっていることもあります。美容医療はなくても生きていけますが、そういったお悩みは精神的にQOLを下げてしまいます。プラスアルファの治療であるからこそ、妥協せずにしっかりお悩みを伺い、適切な治療を提案していきたいと思っています。</p>
+                    <p><strong>経歴</strong></p>
+                    <ul>
+                        <li>2015年 神戸大学医学部卒業</li>
+                        <li>2015年 神戸大学医学部附属病院、その他関連病院で初期研修</li>
+                        <li>2017年 神戸大学医学部附属病院関連病院で小児科研修</li>
+                        <li>2021年 小児科専門医取得</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- クリニック概要 -->
+            <div class="clinic-overview">
+                <p>美容皮膚科エルムクリニックは、地域と患者さまの心に深く根ざして成長していきたいという想いに基づき、西日本を中心に9院を展開しています。</p>
+                <p>メスを使って外科手術を行う「美容外科」とは異なり、「美容皮膚科」はメスを使った治療は行いません。皮膚の構造やメカニズムを熟知した美容皮膚科医が、高い美的効果を出す保険適用外の薬や美容医療で、肌の見た目の美的な質感にこだわった治療で様々なお肌の悩みを解決します。</p>
+            </div>
+            
             <div class="info-grid">
                 <div class="info-item">
                     <div class="info-icon">📍</div>
                     <div class="info-content">
                         <h4>アクセス</h4>
-                        <p>〒650-0011<br>神戸市中央区下山手通3-1-21 東栄ビル4階<br>阪急電鉄「神戸三宮駅」より徒歩5分</p>
+                        <p>〒650-0021<br>神戸市中央区下山手通3-1-21 東栄ビル4階<br>阪急電鉄「神戸三宮駅」より徒歩5分</p>
                     </div>
                 </div>
                 
@@ -870,15 +1025,7 @@
                     <div class="info-icon">🕐</div>
                     <div class="info-content">
                         <h4>営業時間</h4>
-                        <p>9:00～18:00<br>定休日：日曜日・月曜日<br>完全予約制</p>
-                    </div>
-                </div>
-                
-                <div class="info-item">
-                    <div class="info-icon">👩‍⚕️</div>
-                    <div class="info-content">
-                        <h4>院長</h4>
-                        <p>七里 阿寿美（しちり あすみ）<br>神戸大学医学部卒業<br>小児科専門医・美容皮膚科医</p>
+                        <p>AM9:00 - PM6:00<br>定休日：不定休<br>完全予約制</p>
                     </div>
                 </div>
                 
@@ -888,6 +1035,30 @@
                         <h4>お問い合わせ</h4>
                         <p>TEL: 078-335-6025<br>Webからの予約も24時間受付中</p>
                     </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">🏥</div>
+                    <div class="info-content">
+                        <h4>施設</h4>
+                        <p>完全個室・プライバシー配慮<br>最新の美容医療機器完備<br>清潔で落ち着いた院内環境</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Google Map -->
+            <div class="map-section">
+                <h4>アクセスマップ</h4>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.0926!2d135.1914!3d34.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008f0b0b0b0b0b%3A0x1234567890abcdef!2z56We5oi45biC5Lit5aSu5Yy65LiL5bGx5omL6YCaMy0xLTIx!5e0!3m2!1sja!2sjp!4v1640000000000!5m2!1sja!2sjp" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
