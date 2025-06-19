@@ -43,8 +43,9 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 0 20px;
         }
         
         .hero-badge {
@@ -82,7 +83,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
             margin: 30px 0;
             flex-wrap: nowrap;
             width: 100%;
@@ -93,10 +94,22 @@
         
         .star-image {
             flex: 1;
+            max-width: 280px;
             width: 100%;
             height: auto;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
             transition: transform 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .star-images {
+                gap: 5px;
+                margin: 20px -10px;
+            }
+            
+            .star-image {
+                max-width: none;
+            }
         }
         
         .star-image:hover {
