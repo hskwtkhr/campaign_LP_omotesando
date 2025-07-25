@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【感動の物語】エルムクリニック表参道院｜心を動かす美容医療</title>
+    <meta name="description" content="表参道で選ばれる美容皮膚科。感動的な患者様の物語と共に、ヒアルロン酸・ボトックス・ララドクターなど最新施術をご提供。無料カウンセリング受付中">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Martel+Sans:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Playfair+Display:wght@100;400;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* ヒーローセクション */
+        .hero {
+            background: url('imgs/omotesando/20250725_0736_image.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 60px 0 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 40vh;
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 40px;
+            text-align: left;
+        }
+        
+        .hero-badge {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* ヒプノティック・ライティング用アニメーション */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+        
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(231, 76, 60, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(231, 76, 60, 0.8); }
+            100% { text-shadow: 0 0 5px rgba(231, 76, 60, 0.5); }
+        }
+        
+        /* ストーリーハイライトのアニメーション */
+        .story-highlight {
+            transition: all 0.3s ease;
+        }
+        
+        .story-highlight:hover {
+            transform: scale(1.02);
+        }
+        
+        /* キャンペーンカードのホバー効果 */
+        .campaign-card {
+            transition: all 0.3s ease;
+        }
+        
+        .campaign-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* CTAボタンのパルス効果 */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+            background: linear-gradient(135deg, #ee5a52 0%, #ff6b6b 100%);
+        }
+        
+        /* セクション共通スタイル */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: clamp(28px, 5vw, 36px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            position: relative;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff7f95, #d4a574);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        /* ストーリーセクション */
+        .story-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 20px;
+        }
+        
+        .story-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .story-container::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            font-size: 120px;
+            color: #ff7f95;
+            opacity: 0.1;
+            font-family: serif;
+        }
+        
+        .story-title {
+            font-size: clamp(24px, 5vw, 32px);
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .story-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        
+        .story-highlight {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 20px;
+        }
+        
+        /* 感動的な引用のスタイル */
+        .story-content blockquote {
+            font-style: italic;
+            font-size: 20px;
+            color: #ff6b6b;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 5px solid #ff6b6b;
+            background: rgba(255, 107, 107, 0.05);
+        }
+        
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 15px 60px;
+                min-height: 500px;
+            }
+            
+            .section {
+                padding: 40px 15px;
+            }
+            
+            .story-container {
+                padding: 30px 20px;
+                margin: 0 15px;
+            }
+            
+            .story-content {
+                font-size: 16px;
+            }
+            
+            .story-highlight {
+                font-size: 18px;
+                padding: 20px 15px;
+            }
+        }
+        
+        /* キャンペーンセクション */
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .campaign-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .campaign-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .campaign-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            z-index: 1;
+        }
+        
+        .campaign-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            background: #f8f9fa;
+            max-height: 300px;
+        }
+        
+        .campaign-content {
+            padding: 25px;
+        }
+        
+        .campaign-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .campaign-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+        
+        .campaign-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .campaign-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .campaign-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        }
+        
+        /* 症例紹介セクション */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .case-study-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .case-study-header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .case-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            padding-right: 80px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .case-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        
+        .case-images {
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        
+        .case-image-placeholder {
+            height: 150px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .case-image-placeholder small {
+            font-size: 12px;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        
+        .case-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .case-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .case-content {
+            padding: 25px;
+        }
+        
+        .case-details h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            margin-top: 20px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .case-details h4:first-child {
+            margin-top: 0;
+        }
+        
+        .case-details p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .case-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .case-risk {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .case-study-notice {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .case-study-notice p {
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            color: #666;
+        }
+        
+        .case-study-notice ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .case-study-notice li {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+        
+        /* 診療の流れ */
+        .flow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .flow-step {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #ff7f95, #d4a574);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 700;
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .step-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .step-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Q&A */
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            background: #f8f9fa;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            color: #2c3e50;
+            border: none;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            font-family: 'Zen Maru Gothic', sans-serif;
+            font-size: 115%;
+        }
+        
+        .faq-question:hover {
+            background: #e9ecef;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 200px;
+        }
+        
+        .faq-icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-icon.active {
+            transform: rotate(180deg);
+        }
+        
+        /* 院長紹介 */
+        .doctor-profile {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .doctor-intro {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+        
+        .doctor-image {
+            flex-shrink: 0;
+        }
+        
+        .doctor-photo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .doctor-info h4 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+            font-weight: 700;
+        }
+        
+        .doctor-info ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        .doctor-info li {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        /* クリニック情報 */
+        .clinic-info {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .clinic-info h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #ff7f95, #d4a574);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .info-content h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .info-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* マップセクション */
+        .map-section {
+            margin-top: 40px;
+        }
+        
+        .map-section h4 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+            font-weight: 700;
+        }
+        
+        .map-container {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        /* CTAセクション */
+        .cta-section {
+            background: linear-gradient(135deg, #ff7f95 0%, #d4a574 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 0;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(24px, 5vw, 32px);
+            margin-bottom: 20px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* 固定CTAボタン（スマホ用） */
+        .fixed-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .fixed-cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(255,107,107,0.4);
+            transition: all 0.3s ease;
+        }
+        
+        /* 全国9院セクション */
+        .clinic-network-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        
+        .clinic-network-section h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-family: 'Shippori Mincho B1', serif;
+            text-align: center;
+        }
+        
+        .clinic-network {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .clinic-network h5 {
+            font-size: 20px;
+            color: #ff6b6b;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .clinic-network p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        .clinic-branches {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 30px 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .branch-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 8px 12px;
+            text-align: center;
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 13px;
+        }
+        
+        @media (max-width: 768px) {
+            .campaign-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .campaign-card {
+                margin-bottom: 20px;
+            }
+            
+            .flow-steps {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .flow-step {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .step-number {
+                margin: 0 auto;
+            }
+            
+            .step-content {
+                text-align: center;
+            }
+            
+            .fixed-cta {
+                display: block;
+            }
+            
+            .clinic-info {
+                padding: 30px 20px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .doctor-intro {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .doctor-profile {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+                padding: 30px 20px;
+            }
+            
+            .doctor-photo {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .doctor-image {
+                align-self: center;
+            }
+            
+            .case-study-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .case-study-card {
+                margin-bottom: 20px;
+            }
+            
+            .case-title {
+                padding-right: 70px;
+                font-size: 16px;
+            }
+            
+            .case-content {
+                padding: 20px;
+            }
+            
+            .clinic-branches {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+                max-width: 100%;
+            }
+            
+            .branch-item {
+                padding: 6px 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 感動ストーリーから始まるヒーローセクション -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                涙が教えてくれた<br><span class="hero-title-accent">本当の美しさ</span>
+            </h1>
+            <p class="hero-sub">
+                失望から希望へ、諦めから感動へ<br>
+                30代女性が流した涙の向こうに私たちが見たものとは…？
+            </p>
+        </div>
+    </section>
+    
+    <!-- 感動のストーリー（詳細版） -->
+    <section class="story-section" id="story">
+        <div class="story-container">
+            <div class="story-content">
+                <div style="background: white; padding: 40px; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3 style="color: #ff6b6b; font-size: 28px; margin-bottom: 30px; font-family: 'Dancing Script', cursive; font-weight: 700; text-align: center;">Story 1<br>涙が教えてくれた真実</h3>
+                    
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <img src="imgs/omotesando/AdobeStock_491757793_Preview.jpeg" alt="感動的な瞬間" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        ある日、30代の女性が当院を訪れました。彼女の目には、これまでの失望と諦めが映っていました。
+                    </p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        「これまで複数の美容クリニックでカウンセリングを受けてきました。でも、どこでも自分の細かいこだわりを理解してもらえず、疎まれたり、十分に話を聞く時間をとってもらえずに施術を受けることになり、満足のいく仕上がりにならなかったんです」
+                    </p>
+                    
+                    <div class="story-highlight" style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(238, 90, 82, 0.1) 100%); color: #ff6b6b; padding: 20px; border-radius: 15px; margin: 30px auto; text-align: center; font-size: 20px; font-weight: 600; border: 1px solid rgba(255, 107, 107, 0.2); box-shadow: none; max-width: 800px;">
+                        「でも、エルムクリニック表参道院では違いました」
+                    </div>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        当院では、彼女の細かい要望を丁寧にお聞きし、時間をかけてカウンセリングを行いました。私たちは彼女の「美しくなりたい」という純粋な想いを、心から理解しようと努めました。
+                    </p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        施術後、鏡を見た彼女の目からは涙が溢れました。それは、これまでの失望の涙ではなく、感動と喜びの涙でした。
+                    </p>
+                    
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        その後、彼女は定期的に通ってくださり、カウンセリング時には結婚のご報告をいただいたり、挙式前に旦那様をご紹介いただき、施術を担当させていただいたり、妊娠のご報告や、ご出産された後、お子様を連れてご来院いただいたり...と長く関わらせていただいています。
+                    </p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(238, 90, 82, 0.1) 100%); color: #333; padding: 40px; border-radius: 20px; margin: 40px 0; border: 1px solid rgba(255, 107, 107, 0.2); background-image: url('imgs/omotesando/AdobeStock_1224842220_Preview.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                    <div style="position: relative; z-index: 2; background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                        <h3 style="color: #ff6b6b; font-size: 24px; margin-bottom: 20px; text-align: center;">あなたの「美しくなりたい」という想いを実現します</h3>
+                        <p style="font-size: 18px; line-height: 1.8; text-align: center; margin: 0; color: #333;">
+                            私たちは、あなたの心の奥にある純粋な想いを理解し、最適な施術で美しさを引き出すお手伝いをいたします
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- キャンペーンセクション -->
+    <section class="section" id="campaign">
+        <h2 class="section-title">あなたの美しさを引き出す特別な施術</h2>
+        <p class="section-subtitle">感動の物語を生み出す、表参道院限定の特別価格でご提供</p>
+        
+        <div class="campaign-grid">
+            <div class="campaign-card">
+                <div class="campaign-tag">01</div>
+                <img src="imgs/omotesando/omotesando_7_1.jpg" alt="ヒアルロン酸" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">ヒアルロン酸</h3>
+                    <div class="campaign-price">¥64,800</div>
+                    <p class="campaign-description">自然で美しい仕上がりを実現。お顔のバランスを整え、若々しい印象に導きます。あなたの美しさを最大限に引き出します。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">02</div>
+                <img src="imgs/omotesando/omotesando_7_2.jpg" alt="ボツリヌストキシン" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">ボツリヌストキシン</h3>
+                    <div class="campaign-price">¥32,400</div>
+                    <p class="campaign-description">しわの改善と予防に効果的。自然な表情を保ちながら美しさを実現します。あなたの表情をより魅力的に。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">03</div>
+                <img src="imgs/omotesando/omotesando_7_3.jpg" alt="ララドクター" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">【新導入】ララドクター</h3>
+                    <div class="campaign-price">¥89,600</div>
+                    <p class="campaign-description">最新の美容医療技術。お肌の質感を根本から改善し、輝く美しさを実現。あなたの肌を内側から輝かせます。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">04</div>
+                <img src="imgs/omotesando/omotesando_7_4.jpg" alt="マンジャロ" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">【新導入】マンジャロ</h3>
+                    <div class="campaign-price">¥76,800</div>
+                    <p class="campaign-description">たるみ改善に特化した施術。フェイスラインをすっきりと整えます。あなたの若々しさを取り戻します。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">05</div>
+                <img src="imgs/omotesando/omotesando_7_5.jpg" alt="ポテンツァ" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">ポテンツァ</h3>
+                    <div class="campaign-price">¥54,800</div>
+                    <p class="campaign-description">肌質改善とアンチエイジング効果。内側から輝く美しさを実現します。あなたの美しさを時間と共に深めます。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">06</div>
+                <img src="imgs/omotesando/omotesando_7_6.jpg" alt="イボ取り" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">イボ取り</h3>
+                    <div class="campaign-price">¥8,800～</div>
+                    <p class="campaign-description">安全で確実な除去。跡が残りにくく、美しい仕上がりを実現します。あなたの肌をより美しく整えます。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">07</div>
+                <img src="imgs/omotesando/omotesando_7_7.jpg" alt="ニキビ撃退セット" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">ニキビ撃退セット</h3>
+                    <div class="campaign-price">¥32,400</div>
+                    <p class="campaign-description">ニキビの根本的な改善を目指す総合的な施術。あなたの肌トラブルを解決し、美しい肌を実現します。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">08</div>
+                <img src="imgs/omotesando/omotesando_7_8.jpg" alt="白玉点滴＋ビタミンC・E内服セット" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">白玉点滴＋ビタミンC・E内服セット</h3>
+                    <div class="campaign-price">¥21,600</div>
+                    <p class="campaign-description">内側から美しさをサポート。ビタミン補給で肌の調子を整え、内側から輝く美しさを実現します。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">09</div>
+                <img src="imgs/omotesando/omotesando_7_9.jpg" alt="サマーコフレ" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">サマーコフレ</h3>
+                    <div class="campaign-price">¥43,200</div>
+                    <p class="campaign-description">夏の肌トラブルを解決する総合的な施術。紫外線ダメージから肌を守り、美しい肌を維持します。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card">
+                <div class="campaign-tag">10</div>
+                <img src="imgs/omotesando/omotesando_7_10.jpg" alt="リップアートメイク" class="campaign-image">
+                <div class="campaign-content">
+                    <h3 class="campaign-title">リップアートメイク</h3>
+                    <div class="campaign-price">¥38,800</div>
+                    <p class="campaign-description">自然で美しい唇を実現。あなたの表情をより魅力的にし、自信を持って笑顔になれる唇に導きます。</p>
+                    <a href="#contact" class="campaign-button">詳細を見る</a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="background: linear-gradient(45deg, #ff6b6b, #ff8e8e); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-top: 40px;">
+            <h3 style="font-size: 28px; margin-bottom: 20px; font-family: 'Zen Maru Gothic', sans-serif;">
+                あなたの美しさは、もうすぐそこにあります
+            </h3>
+            <p style="font-size: 18px; line-height: 1.6; margin-bottom: 30px; opacity: 0.95;">
+                まずは無料カウンセリングで、あなたの想いをお聞かせください<br>
+                私たちが、あなたの美しさを引き出すお手伝いをいたします
+            </p>
+            <a href="#contact" class="cta-button" style="background: white; color: #ff6b6b; font-size: 18px; padding: 15px 30px;">
+                無料カウンセリングを予約する
+            </a>
+        </div>
+    </section>
+
+    <!-- ストーリー2セクション -->
+    <section class="section">
+        <div class="container">
+            <div style="background: white; padding: 40px; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <h3 style="color: #ff6b6b; font-size: 28px; margin-bottom: 30px; font-family: 'Dancing Script', cursive; font-weight: 700; text-align: center;">Story 2<br>医療がつなぐ世代の絆</h3>
+                
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img src="imgs/omotesando/AdobeStock_980382453_Preview.jpeg" alt="医療の絆" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+                
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    ある日、眼科医時代に手術を担当させていただいた患者様が、<br>
+                    お母様と一緒にご来院されました。<br>
+                    その時、私は医療の本質について深く考えさせられることになります。
+                </p>
+                
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    娘様はヒアルロン酸で若々しさを取り戻し、<br>
+                    お母様は糸リフトでフェイスラインを整えられました。<br>
+                    施術後、お二人の笑顔を見た瞬間、私は大きな気づきを得ました。
+                </p>
+                
+                <div class="story-highlight" style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(238, 90, 82, 0.1) 100%); color: #ff6b6b; padding: 20px; border-radius: 15px; margin: 30px auto; text-align: center; font-size: 20px; font-weight: 600; border: 1px solid rgba(255, 107, 107, 0.2); box-shadow: none; max-width: 800px;">
+                    病気を治す医療と、心のコンプレックスを治す医療。<br>
+                    どちらも同じくらい大切な医療なのだと。
+                </div>
+                
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    お母様は「娘が医師を目指すようになったのは、<br>
+                    先生の手術を受けてからです」とおっしゃいました。<br>
+                    その言葉に、私は胸が熱くなりました。
+                </p>
+                
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    そして何より感動的だったのは、<br>
+                    その後、娘様が医師を目指されているというお話でした。<br>
+                    私たちの医療が、次の世代の医師を育てることにつながっている。<br>
+                    この事実に、私は医療者としての責任と誇りを改めて感じました。
+                </p>
+                
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    この経験を通じて、私は確信しました。<br>
+                    美容医療は単なる見た目の改善ではありません。<br>
+                    患者様の自信を取り戻し、人生をより豊かにする医療なのだと。<br>
+                    そして、その医療が次の世代へと受け継がれていく。<br>
+                    これこそが、私たちが目指すべき医療の姿なのです。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 症例写真セクション -->
+    <section class="section">
+        <h2 class="section-title">症例写真</h2>
+        <p class="section-subtitle">実際の施術結果をご覧ください<br class="mobile-br">※効果には個人差があります</p>
+        
+        <div class="case-study-grid">
+            <div class="case-study-card fade-in">
+                <div class="case-study-header">
+                    <h3 class="case-title">クレオパトラノーズ(鼻糸リフト) 鼻背部4本</h3>
+                    <div class="case-tag">症例01</div>
+                </div>
+                <div class="case-images">
+                    <img src="imgs/omotesando/4fbeab84f9bc78540bf629399c0f91f6.png" alt="クレオパトラノーズ(鼻糸リフト)症例 Before/After" class="case-image">
+                </div>
+                <div class="case-content">
+                    <div class="case-details">
+                        <h4>施術内容</h4>
+                        <p>鼻筋に沿って吸収糸を入れることで、鼻の高さを出し、鼻筋を細く見せることが可能です。</p>
+                        
+                        <h4>施術金額</h4>
+                        <p class="case-price">¥64,800</p>
+                        
+                        <h4>担当医</h4>
+                        <p>土井 優佳</p>
+                        
+                        <h4>副作用・リスク</h4>
+                        <p class="case-risk">赤み・腫れ・痛み・内出血・妊娠NG・アレルギー反応・つっぱり</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study-card fade-in">
+                <div class="case-study-header">
+                    <h3 class="case-title">ヒアルロン酸1cc</h3>
+                    <div class="case-tag">症例02</div>
+                </div>
+                <div class="case-images">
+                    <img src="imgs/omotesando/cde3623e694b416a5a8e8da1e6a6b21f.png" alt="ヒアルロン酸症例 Before/After" class="case-image">
+                </div>
+                <div class="case-content">
+                    <div class="case-details">
+                        <h4>施術内容</h4>
+                        <p>目の下の痩せやほうれい線が深くなることで、疲れた印象、やつれた印象を伴います。ヒアルロン酸で痩せを補うことで、自然な若返り効果が期待できます。</p>
+                        
+                        <h4>施術金額</h4>
+                        <p class="case-price">¥69,800</p>
+                        
+                        <h4>担当医</h4>
+                        <p>土井 優佳</p>
+                        
+                        <h4>副作用・リスク</h4>
+                        <p class="case-risk">赤み・腫れ・痛み・内出血・妊娠NG・しこり・アレルギー反応</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study-card fade-in">
+                <div class="case-study-header">
+                    <h3 class="case-title">エルムリフト 8本</h3>
+                    <div class="case-tag">症例03</div>
+                </div>
+                <div class="case-images">
+                    <img src="imgs/omotesando/616fac4231614af90f8a449a828896fc.png" alt="エルムリフト症例 Before/After" class="case-image">
+                </div>
+                <div class="case-content">
+                    <div class="case-details">
+                        <h4>施術内容</h4>
+                        <p>加齢に伴い下垂した脂肪を適切な位置に引き上げることで、若々しい印象に。口横やフェイスラインのもたつき、ほうれい線など、今あるたるみ症状の軽減だけでなく、たるみの予防としてもおすすめです。</p>
+                        
+                        <h4>施術金額</h4>
+                        <p class="case-price">¥160,000</p>
+                        
+                        <h4>担当医</h4>
+                        <p>土井 優佳</p>
+                        
+                        <h4>副作用・リスク</h4>
+                        <p class="case-risk">赤み・腫れ・かゆみ・痛み・しこり・アレルギー反応・内出血</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study-card fade-in">
+                <div class="case-study-header">
+                    <h3 class="case-title">ボツリヌストキシン 眉間・額</h3>
+                    <div class="case-tag">症例04</div>
+                </div>
+                <div class="case-images">
+                    <img src="imgs/omotesando/e0781a8d3a2d23dcf6441a0d0493e19e.jpg" alt="ボツリヌストキシン症例 Before/After" class="case-image">
+                </div>
+                <div class="case-content">
+                    <div class="case-details">
+                        <h4>施術内容</h4>
+                        <p>眉間のしわや額のしわを改善し、自然で美しい表情を実現します。</p>
+                        
+                        <h4>施術金額</h4>
+                        <p class="case-price">¥21,600</p>
+                        
+                        <h4>担当医</h4>
+                        <p>土井 優佳</p>
+                        
+                        <h4>副作用・リスク</h4>
+                        <p class="case-risk">赤み・腫れ・痛み・内出血・表情の変化</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study-card fade-in">
+                <div class="case-study-header">
+                    <h3 class="case-title">ララドクター</h3>
+                    <div class="case-tag">症例05</div>
+                </div>
+                <div class="case-images">
+                    <img src="imgs/omotesando/ae99268ff4b6af1aa118f8b7faef31bf.png" alt="ララドクター症例 Before/After" class="case-image">
+                </div>
+                <div class="case-content">
+                    <div class="case-details">
+                        <h4>施術内容</h4>
+                        <p>最新の美容医療技術を駆使した施術で、自然で美しい仕上がりを実現します。</p>
+                        
+                        <h4>施術金額</h4>
+                        <p class="case-price">¥43,200</p>
+                        
+                        <h4>担当医</h4>
+                        <p>土井 優佳</p>
+                        
+                        <h4>副作用・リスク</h4>
+                        <p class="case-risk">赤み・腫れ・痛み・内出血・アレルギー反応</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study-card fade-in">
+                <div class="case-study-header">
+                    <h3 class="case-title">ポテンツァ</h3>
+                    <div class="case-tag">症例06</div>
+                </div>
+                <div class="case-images">
+                    <img src="imgs/omotesando/8ea6a8fcaa4835879c49b399e38d74f6.jpg" alt="ポテンツァ症例 Before/After" class="case-image">
+                </div>
+                <div class="case-content">
+                    <div class="case-details">
+                        <h4>施術内容</h4>
+                        <p>最新の美容医療技術で、自然で美しい仕上がりを実現します。</p>
+                        
+                        <h4>施術金額</h4>
+                        <p class="case-price">¥38,880</p>
+                        
+                        <h4>担当医</h4>
+                        <p>土井 優佳</p>
+                        
+                        <h4>副作用・リスク</h4>
+                        <p class="case-risk">赤み・腫れ・痛み・内出血・アレルギー反応</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 診察の流れ -->
+    <section class="section">
+        <h2 class="section-title">診察の流れ</h2>
+        <p class="section-subtitle">初回から施術まで、安心してお受けいただけるよう丁寧にサポートします</p>
+        
+        <div class="flow-steps">
+            <div class="flow-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3 class="step-title">カウンセリング予約</h3>
+                    <p class="step-description">お電話またはWebからご予約いただけます。完全予約制のため、お待たせすることなくご案内できます。</p>
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3 class="step-title">ご来院・受付</h3>
+                    <p class="step-description">ご予約時間にご来院ください。カルテ作成後、お悩みやご希望を詳しくお聞かせください。</p>
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3 class="step-title">医師カウンセリング</h3>
+                    <p class="step-description">経験豊富な医師が丁寧にカウンセリング。お肌の状態を診察し、最適な治療プランをご提案します。</p>
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3 class="step-title">お申込み・お支払い</h3>
+                    <p class="step-description">治療内容にご納得いただけましたら、同意書記入とお支払いを済ませていただきます。</p>
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3 class="step-title">施術実施</h3>
+                    <p class="step-description">完全個室にて、痛みに配慮した丁寧な施術を行います。リラックスしてお受けください。</p>
+                </div>
+            </div>
+            
+            <div class="flow-step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3 class="step-title">アフターケア</h3>
+                    <p class="step-description">施術後のケア方法をご説明。ご不安な点があれば、いつでもお気軽にご相談ください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- よくある質問 -->
+    <section class="section">
+        <h2 class="section-title">よくある質問</h2>
+        <p class="section-subtitle">患者様からよくいただくご質問にお答えします</p>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                初回カウンセリングは本当に無料ですか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                はい、初回カウンセリングは完全無料です。医師による丁寧な診察とご相談を無料でお受けいただけます。治療を強制することは一切ございませんので、お気軽にお越しください。
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                施術の痛みはありますか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                施術の種類により異なりますが、当院では痛みを最小限に抑える工夫をしております。表面麻酔や冷却機能付きの機器を使用し、患者様が快適に施術をお受けいただけるよう配慮しています。
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                ダウンタイムはどのくらいですか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                施術により異なりますが、多くの治療でダウンタイムは短く設定されています。ヒアルロン酸やボトックスなどは当日からメイクが可能です。詳細は各施術ページをご確認ください。
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                支払い方法を教えてください
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                現金一括払い、各種クレジットカード、医療ローンをご利用いただけます。医療ローンは月々3,000円からの分割払いが可能です。詳しくはスタッフまでお尋ねください。
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                交通費の負担はありますか？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                当院では遠方からの患者様のために交通費負担施策を実施しております。詳細はカウンセリング時にご相談ください。
+            </div>
+        </div>
+    </section>
+    
+    <!-- 院長紹介 -->
+    <section class="section">
+        <h2 class="section-title">院長紹介</h2>
+        <p class="section-subtitle">あなたの美しさを心から理解する医師</p>
+        
+        <div class="doctor-profile">
+            <div class="doctor-image">
+                <img src="imgs/omotesando/doi.png" alt="土井優佳院長" class="doctor-photo">
+            </div>
+            <div class="doctor-info">
+                <h3 class="doctor-name">土井 優佳 院長</h3>
+                <div class="doctor-credentials">
+                    <p><strong>資格:</strong> 日本皮膚科学会認定皮膚科専門医</p>
+                    <p><strong>専門分野:</strong> 美容皮膚科、美容医療</p>
+                    <p><strong>経歴:</strong> 眼科医としての経験を活かし、美容医療に従事</p>
+                </div>
+                <div class="doctor-message">
+                    <h4>院長からのメッセージ</h4>
+                    <p>「美容医療は、ただ見た目を変えるだけではありません。患者様の心の奥にある『美しくなりたい』という純粋な想いを理解し、その想いを実現するお手伝いをすることが、私たちの使命だと考えています。</p>
+                    <p>眼科医時代の経験を活かし、細やかな技術と患者様への深い理解を持って、一人ひとりの患者様に最適な施術をご提案いたします。あなたの美しさを引き出すお手伝いをさせていただきます。」</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 院内の様子 -->
+    <section class="section">
+        <div class="interior-gallery" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%;">
+            <img src="imgs/omotesando/interior1.jpg" alt="表参道院 受付" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="imgs/omotesando/interior2.jpg" alt="表参道院 カウンセリングルーム" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="imgs/omotesando/interior3.jpg" alt="表参道院 施術室" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="imgs/omotesando/interior4.jpg" alt="表参道院 待合室" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="imgs/omotesando/interior5.jpg" alt="表参道院 院内風景" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="imgs/omotesando/interior6.jpg" alt="表参道院 設備" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="imgs/omotesando/interior7.jpg" alt="表参道院 休憩スペース" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="imgs/omotesando/interior8.jpg" alt="表参道院 院内全体" style="width: 100%; height: auto; object-fit: cover;">
+        </div>
+    </section>
+    
+    <!-- クリニック情報 -->
+    <section class="section" id="contact">
+        <h2 class="section-title">クリニック情報</h2>
+        <p class="section-subtitle">エルムクリニック表参道院へのアクセス</p>
+        
+        <div class="clinic-info-container">
+            <div class="clinic-details">
+                <div class="info-item">
+                    <h3>基本情報</h3>
+                    <p><strong>院名:</strong> エルムクリニック表参道院</p>
+                    <p><strong>住所:</strong> 〒150-0001 東京都渋谷区神宮前4-26-18 神宮前421ビル2F</p>
+                    <p><strong>電話番号:</strong> 03-6807-4171</p>
+                    <p><strong>営業時間:</strong> 平日 10:00〜19:00 / 土日祝 9:30〜18:30</p>
+                    <p><strong>定休日:</strong> 日曜日 ※臨時休診を設ける場合もございます</p>
+                    <p><strong>LINE:</strong> @elm-omotesando</p>
+                    <p><strong>Instagram:</strong> @elmclinic_omotesando</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>交通アクセス</h3>
+                    <p><strong>最寄り駅:</strong></p>
+                    <ul>
+                        <li>東京メトロ千代田線・副都心線「明治神宮前」駅 徒歩3分</li>
+                        <li>東京メトロ銀座線・千代田線・半蔵門線「表参道」駅 徒歩5分</li>
+                        <li>JR山手線「原宿」駅 徒歩8分</li>
+                    </ul>
+                    <p><strong>アクセス方法:</strong> 表参道のメインストリートから少し入った静かな場所に位置し、落ち着いた雰囲気で施術を受けていただけます。</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>交通費負担施策</h3>
+                    <p>遠方からお越しの患者様には、交通費の一部を負担させていただく制度をご用意しています。詳しくはカウンセリング時にご相談ください。</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479757500003!2d139.7033!3d35.6654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDM5JzU1LjQiTiAxMznCsDQyJzExLjkiRQ!5e0!3m2!1sja!2sjp!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 15px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+        
+        <div style="background: linear-gradient(45deg, #ff6b6b, #ff8e8e); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-top: 40px;">
+            <h3 style="font-size: 28px; margin-bottom: 20px; font-family: 'Zen Maru Gothic', sans-serif;">
+                あなたの美しさは、もうすぐそこにあります
+            </h3>
+            <p style="font-size: 18px; line-height: 1.6; margin-bottom: 30px; opacity: 0.95;">
+                まずは無料カウンセリングで、あなたの想いをお聞かせください<br>
+                私たちが、あなたの美しさを引き出すお手伝いをいたします
+            </p>
+            <a href="#contact" class="cta-button" style="background: white; color: #ff6b6b; font-size: 18px; padding: 15px 30px;">
+                無料カウンセリングを予約する
+            </a>
+        </div>
+    </section>
+    
+    <!-- 全国9院を展開するエルムクリニック -->
+    <section class="section">
+        <h2 class="section-title">全国9院を展開するエルムクリニック</h2>
+        <p class="section-subtitle">地域と患者さまの心に深く根ざして成長していきたいという想い</p>
+        
+        <div class="clinic-network">
+            <div class="clinic-branches">
+                <div class="branch-item">広島院</div>
+                <div class="branch-item">福岡院</div>
+                <div class="branch-item">岡山院</div>
+                <div class="branch-item">京都院</div>
+                <div class="branch-item">熊本院</div>
+                <div class="branch-item">大阪院</div>
+                <div class="branch-item">神戸院</div>
+                <div class="branch-item">表参道院</div>
+                <div class="branch-item">麻布院</div>
+            </div>
+            
+            <div class="network-description">
+                <p>美容皮膚科エルムクリニックは、地域と患者さまの心に深く根ざして成長していきたいという想いに基づき、西日本を中心に9院を展開しています。</p>
+                <p>メスを使って外科手術を行う「美容外科」とは異なり、「美容皮膚科」はメスを使った治療は行いません。皮膚の構造やメカニズムを熟知した美容皮膚科医が、高い美的効果を出す保険適用外の薬や美容医療で、肌の見た目の美的な質感にこだわった治療で様々なお肌の悩みを解決します。</p>
+                
+                <h5>充実した研修体制</h5>
+                <p>エルムクリニックでは、すべての医師が安全で効果的な治療を提供できるよう、入社時から継続的な研修体制を整えています。技術研修はもちろん、接遇研修やカウンセリング研修も徹底して行い、患者様に安心してご来院いただける環境づくりに努めております。</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 医師陣画像 -->
+    <div style="padding: 0; margin: 0; text-align: center;">
+        <img src="imgs/doctors.png" alt="エルムクリニック表参道院医師陣" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+    </div>
+    
+    <!-- CTA セクション -->
+    <section class="cta-section" id="contact">
+        <h2>まずは無料カウンセリングから</h2>
+        <p>あなたのお悩みに最適な治療プランをご提案いたします。<br>経験豊富な医師が丁寧にカウンセリングを行いますので、お気軽にご相談ください。</p>
+        <a href="tel:03-6807-4171" class="cta-button">03-6807-4171</a>
+        <p style="margin: 10px auto; font-size: 14px; opacity: 0.8; text-align: center; max-width: 400px;">営業時間：平日10:00～19:00、土日祝9:30～18:30（定休日：日曜日）</p>
+        <div style="margin: 20px 0; text-align: center;">または</div>
+        <a href="#" class="cta-button">Web予約はこちら</a>
+    </section>
+    
+    <!-- 固定CTAボタン（スマホ用） -->
+    <div class="fixed-cta">
+        <a href="tel:03-6807-4171" class="fixed-cta-button">
+            📞 今すぐ電話で予約
+        </a>
+    </div>
+    
+    <!-- フッター -->
+    <footer style="background: #2c3e50; color: white; text-align: center; padding: 30px 20px;">
+        <div style="margin-bottom: 15px;">
+            <a href="#" style="color: #bbb; text-decoration: none; font-size: 14px;">プライバシーポリシー</a>
+        </div>
+        <p style="margin: 0; font-size: 12px; opacity: 0.8;">
+            Copyright © 2025 ELM CLINIC. All rights reserved.
+        </p>
+    </footer>
+    
+    <script>
+        // FAQトグル機能
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.classList.remove('active');
+            } else {
+                answer.classList.add('active');
+                icon.classList.add('active');
+            }
+        }
+        
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // 固定CTAボタンの表示制御
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const fixedCta = document.querySelector('.fixed-cta');
+            
+            if (scrolled > 500) {
+                fixedCta.style.display = 'block';
+            } else {
+                fixedCta.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 
