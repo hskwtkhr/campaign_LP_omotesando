@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【感動の物語】エルムクリニック表参道院｜心を動かす美容医療</title>
     <meta name="description" content="表参道で選ばれる美容皮膚科。感動的な患者様の物語と共に、ヒアルロン酸・ボトックス・ララドクターなど最新施術をご提供。無料カウンセリング受付中">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Martel+Sans:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Playfair+Display:wght@100;400;700&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Martel+Sans:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Playfair+Display:wght@100&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts Noto Serif JP ExtraLight追加 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -22,15 +24,18 @@
         
         /* ヒーローセクション */
         .hero {
-            background: url('imgs/omotesando/20250725_0736_image.jpg');
+            background: url('imgs/omotesando/AdobeStock_876552145_Preview.jpeg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             color: white;
             padding: 60px 0 80px;
+            text-align: initial;
             position: relative;
             overflow: hidden;
-            min-height: 40vh;
+            min-height: 30vh;
+            display: block;
+            align-items: initial;
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
         }
         
@@ -45,7 +50,7 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 40px;
             text-align: left;
@@ -179,26 +184,16 @@
         }
         
         .story-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
             border-radius: 25px;
             padding: 50px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
-        .story-container::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 30px;
-            font-size: 120px;
-            color: #ff7f95;
-            opacity: 0.1;
-            font-family: serif;
-        }
+
         
         .story-title {
             font-size: clamp(24px, 5vw, 32px);
@@ -215,6 +210,8 @@
             color: #555;
             margin-bottom: 30px;
             text-align: justify;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .story-highlight {
@@ -636,11 +633,24 @@
         }
         
         .doctor-photo {
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
             object-fit: cover;
+            object-position: center 20px;
             border-radius: 50%;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .doctor-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .doctor-credentials {
+            margin-bottom: 40px;
         }
         
         .doctor-info h4 {
@@ -900,8 +910,8 @@
             }
             
             .doctor-photo {
-                width: 150px;
-                height: 150px;
+                width: 180px;
+                height: 180px;
             }
             
             .doctor-image {
@@ -937,14 +947,48 @@
                 font-size: 12px;
             }
         }
+        
+        .hero-maincopy {
+          font-family: 'Noto Serif JP', serif;
+          font-weight: 200;
+          font-size: 100pt;
+          line-height: 1.1;
+          color: #fff;
+          letter-spacing: 0.01em;
+          text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .hero-maincopy .accent {
+          color: #ff6b6b;
+          font-weight: 200;
+          display: block;
+        }
+        .hero-sub {
+          font-family: 'Inter', sans-serif;
+          font-size: 20px;
+          line-height: 2.2;
+          font-style: italic;
+          font-weight: 400;
+          color: #fff;
+          margin-top: 60px;
+          margin-bottom: 25px;
+          text-align: left;
+        }
+        @media (max-width: 900px) {
+          .hero-content { padding: 0 16px; }
+          .hero-maincopy { font-size: 48pt; }
+        }
     </style>
 </head>
 <body>
     <!-- 感動ストーリーから始まるヒーローセクション -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">
-                涙が教えてくれた<br><span class="hero-title-accent">本当の美しさ</span>
+            <div style="text-align: center; margin-bottom: 30px;">
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 20px; color: white; margin: 0; letter-spacing: 4px; font-weight: 400;">ELM CLINIC</p>
+            </div>
+            <h1 class="hero-maincopy">
+                <span>涙が教えてくれた</span>
+                <span class="accent">本当の美しさ</span>
             </h1>
             <p class="hero-sub">
                 失望から希望へ、諦めから感動へ<br>
@@ -955,20 +999,16 @@
     
     <!-- 感動のストーリー（詳細版） -->
     <section class="story-section" id="story">
-        <div class="story-container">
-            <div class="story-content">
-                <div style="background: white; padding: 40px; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    <h3 style="color: #ff6b6b; font-size: 28px; margin-bottom: 30px; font-family: 'Dancing Script', cursive; font-weight: 700; text-align: center;">Story 1<br>涙が教えてくれた真実</h3>
-                    
-                    <div style="text-align: center; margin-bottom: 30px;">
-                        <img src="imgs/omotesando/AdobeStock_491757793_Preview.jpeg" alt="感動的な瞬間" style="width: 100%; height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                    </div>
-                    
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <div class="story-content">
+            <div style="background: url('imgs/omotesando/AdobeStock_491757793_Preview.jpeg') center -100px; background-size: 100% auto; background-repeat: no-repeat; padding: 40px; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; min-height: 200px;">
+                <h3 style="color: #ff6b6b; font-size: 28px; margin-bottom: 30px; font-family: 'Dancing Script', cursive; font-weight: 700; text-align: center; position: relative; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Story 1<br>涙が教えてくれた真実</h3>
+                
+                <div style="position: relative; z-index: 2; background: rgba(255, 255, 255, 0.95); padding: 30px 30px 0 30px; border-radius: 15px; margin-top: 200px;">
+                    <p style="font-size: 18px; line-height: 2.2; margin-bottom: 25px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
                         ある日、30代の女性が当院を訪れました。彼女の目には、これまでの失望と諦めが映っていました。
                     </p>
                     
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <p style="font-size: 18px; line-height: 2.2; margin-bottom: 25px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
                         「これまで複数の美容クリニックでカウンセリングを受けてきました。でも、どこでも自分の細かいこだわりを理解してもらえず、疎まれたり、十分に話を聞く時間をとってもらえずに施術を受けることになり、満足のいく仕上がりにならなかったんです」
                     </p>
                     
@@ -976,26 +1016,40 @@
                         「でも、エルムクリニック表参道院では違いました」
                     </div>
                     
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <p style="font-size: 18px; line-height: 2.2; margin-bottom: 25px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
                         当院では、彼女の細かい要望を丁寧にお聞きし、時間をかけてカウンセリングを行いました。私たちは彼女の「美しくなりたい」という純粋な想いを、心から理解しようと努めました。
                     </p>
                     
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <p style="font-size: 18px; line-height: 2.2; margin-bottom: 25px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
                         施術後、鏡を見た彼女の目からは涙が溢れました。それは、これまでの失望の涙ではなく、感動と喜びの涙でした。
                     </p>
                     
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <p style="font-size: 18px; line-height: 2.2; margin-bottom: 25px; color: #333; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
                         その後、彼女は定期的に通ってくださり、カウンセリング時には結婚のご報告をいただいたり、挙式前に旦那様をご紹介いただき、施術を担当させていただいたり、妊娠のご報告や、ご出産された後、お子様を連れてご来院いただいたり...と長く関わらせていただいています。
                     </p>
-                </div>
-                
-                <div style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(238, 90, 82, 0.1) 100%); color: #333; padding: 40px; border-radius: 20px; margin: 40px 0; border: 1px solid rgba(255, 107, 107, 0.2); background-image: url('imgs/omotesando/AdobeStock_1224842220_Preview.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
-                    <div style="position: relative; z-index: 2; background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.2);">
-                        <h3 style="color: #ff6b6b; font-size: 24px; margin-bottom: 20px; text-align: center;">あなたの「美しくなりたい」という想いを実現します</h3>
-                        <p style="font-size: 18px; line-height: 1.8; text-align: center; margin: 0; color: #333;">
-                            私たちは、あなたの心の奥にある純粋な想いを理解し、最適な施術で美しさを引き出すお手伝いをいたします
-                        </p>
+                    
+                    <div style="display: flex; align-items: flex-end; gap: 30px; margin-top: 10px; padding-bottom: 30px;">
+                        <div style="flex-shrink: 0; display: flex; align-items: flex-end; margin-left: 100px;">
+                            <img src="imgs/omotesando/dr_doi.png" alt="土井院長" style="width: 200px; height: auto; border-radius: 10px; object-fit: cover; object-position: bottom;">
+                        </div>
+                        <div style="flex: 1; max-width: 500px;">
+                            <p style="font-size: 16px; line-height: 1.6; color: #666; font-style: italic; margin: 0;">
+                                「私たちは、患者様一人ひとりの心に寄り添い、本当の美しさを引き出すお手伝いをさせていただきます。あなたの想いを大切に、最適な施術をご提案いたします。」
+                            </p>
+                            <p style="font-size: 14px; color: #999; margin-top: 10px; margin-bottom: 0;">
+                                ― エルムクリニック表参道院 土井院長
+                            </p>
+                        </div>
                     </div>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(238, 90, 82, 0.1) 100%); color: #333; padding: 80px; border-radius: 20px; margin: 40px 0; border: 1px solid rgba(255, 107, 107, 0.2); background-image: url('imgs/omotesando/AdobeStock_1224842220_Preview.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+                <div style="position: relative; z-index: 2; background: rgba(255, 255, 255, 0.1); padding: 60px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <h3 style="color: #ff6b6b; font-size: 24px; margin-bottom: 20px; text-align: center;">あなたの「美しくなりたい」という想いを実現します</h3>
+                    <p style="font-size: 18px; line-height: 1.8; text-align: center; margin: 0; color: #333;">
+                        私たちは、あなたの心の奥にある純粋な想いを理解し、最適な施術で美しさを引き出すお手伝いをいたします
+                    </p>
                 </div>
             </div>
         </div>
@@ -1460,7 +1514,7 @@
         
         <div class="doctor-profile">
             <div class="doctor-image">
-                <img src="imgs/omotesando/doi.png" alt="土井優佳院長" class="doctor-photo">
+                <img src="imgs/omotesando/dr_doi.png" alt="土井優佳院長" class="doctor-photo">
             </div>
             <div class="doctor-info">
                 <h3 class="doctor-name">土井 優佳 院長</h3>
