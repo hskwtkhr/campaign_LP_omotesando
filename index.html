@@ -5,8 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【6月限定】エルムクリニック神戸院キャンペーン｜美容皮膚科・医療アートメイク</title>
     <meta name="description" content="年間症例2万件超！開院14年の実績と信頼。6月限定キャンペーン実施中。ヒアルロン酸・ボトックス・アートメイクなど人気施術が特別価格。無料カウンセリング受付中">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Martel+Sans:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- ヒーローセクション画像プリロード -->
+    <link rel="preload" href="imgs/ELM15.jpg" as="image">
+    <link rel="preload" href="imgs/dr_shichiri_N.png" as="image">
+    <link rel="preload" href="imgs/star_1.png" as="image">
+    <link rel="preload" href="imgs/star_2.png" as="image">
+    <link rel="preload" href="imgs/star_3.png" as="image">
+    
+    <!-- フォントプリロード -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Martel+Sans:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Martel+Sans:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap"></noscript>
     <style>
+        /* モーダルスタイル */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 0;
+            border: none;
+            width: 80%;
+            height: 80%;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .modal-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: #aaa;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            background: rgba(255,255,255,1);
+            transform: scale(1.1);
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -20,17 +90,180 @@
             background-color: #f8f9fa;
         }
         
+        /* スマホファーストの基本レイアウト */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        /* メインコンテンツエリア */
+        .main-content {
+            max-width: 100%;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* PC版でのレイアウト（1024px以上のみ） */
+        @media (min-width: 1024px) {
+            body {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                position: relative;
+            }
+            
+            /* PC版での左右要素表示 */
+            .pc-side-element {
+                display: block !important;
+            }
+            
+            /* PC版での左右固定要素 */
+            .pc-side-element {
+                position: fixed;
+                top: 200px;
+                bottom: 200px;
+                width: 200px;
+                z-index: 100;
+                border-radius: 15px;
+                padding: 30px 20px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+            
+            .pc-side-element.left {
+                background: url('imgs/AdobeStock_376924366_marble.jpeg') center/cover;
+                left: 15px;
+            }
+            
+            .pc-side-element.right {
+                background: url('imgs/AdobeStock_376924366_marble.jpeg') center/cover;
+                right: 15px;
+            }
+            
+            /* 広いモニター（1400px以上）での幅拡大 */
+            @media (min-width: 1400px) {
+                .pc-side-element {
+                    width: 240px;
+                    padding: 40px 25px;
+                }
+            }
+            
+            /* より広いモニター（1800px以上）での幅拡大 */
+            @media (min-width: 1800px) {
+                .pc-side-element {
+                    width: 260px;
+                    padding: 45px 30px;
+                }
+            }
+            
+
+            
+            .hero {
+                min-height: 800px;
+                padding: 40px 20px 120px;
+            }
+            
+
+
+            
+            /* メインコンテンツの調整 */
+            .main-content {
+                max-width: 768px;
+                margin: 0 auto;
+                padding: 0 20px;
+                position: relative;
+                z-index: 10;
+                background: transparent;
+                width: 768px;
+                box-sizing: border-box;
+                margin-left: 230px;
+                margin-right: 230px;
+            }
+            
+            /* PC版でのスター画像調整 */
+            .star-images {
+                max-width: 768px;
+                margin: 60px auto;
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .star-image {
+                max-width: 300px;
+                height: auto;
+            }
+            
+            /* メインコンテンツ内の各セクション */
+            .main-content .section {
+                position: relative;
+                z-index: 10;
+                background: transparent;
+            }
+            
+            /* ヒーローセクションは背景を保持 */
+            .main-content .hero {
+                position: relative;
+                z-index: 10;
+                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/ELM15.jpg');
+                background-size: cover;
+                background-position: center;
+                width: 100vw;
+                margin-left: calc(-50vw + 50%);
+                margin-right: calc(-50vw + 50%);
+            }
+            
+            /* フッターは背景を保持 */
+            .main-content footer {
+                position: relative;
+                z-index: 10;
+                background: #2c3e50;
+                width: 100vw;
+                margin-left: calc(-50vw + 50%);
+                margin-right: calc(-50vw + 50%);
+                padding-bottom: 120px;
+            }
+            
+            /* CTAセクションは背景を保持 */
+            .main-content .cta-section {
+                position: relative;
+                z-index: 10;
+                background: linear-gradient(135deg, #ff7f95 0%, #d4a574 100%);
+                width: 100vw;
+                margin-left: calc(-50vw + 50%);
+                margin-right: calc(-50vw + 50%);
+            }
+        }
+        
         /* ヒーローセクション */
         .hero {
-            background: linear-gradient(135deg, #ff7f95 0%, #d4a574 100%);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/ELM15.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 60px 20px 80px;
+            padding: 40px 20px 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
             min-height: 600px;
             display: flex;
             align-items: center;
+            z-index: 10;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
         }
         
         .hero::before {
@@ -88,7 +321,7 @@
             justify-content: center;
             align-items: center;
             gap: 20px;
-            margin: 30px 0;
+            margin: 40px 0;
             flex-wrap: nowrap;
             width: 100%;
             max-width: 900px;
@@ -98,7 +331,7 @@
         
         .star-image {
             flex: 1;
-            max-width: 280px;
+            max-width: 200px;
             width: 100%;
             height: auto;
             filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
@@ -109,16 +342,68 @@
             display: none;
         }
         
-        @media (max-width: 768px) {
+        /* タブレット版での最適化（768px〜1023px） */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .left-sidebar,
+            .right-sidebar {
+                display: none !important;
+            }
+            
+            .main-content {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 20px;
+                max-width: 100% !important;
+            }
+            
             .hero {
-                padding: 40px 15px 60px;
-                min-height: 500px;
+                padding: 50px 20px 100px;
+                min-height: 700px;
+            }
+            
+            .hero .doctor-image {
+                height: 280px !important;
+                left: calc(15% - 50px) !important;
+                bottom: -100px !important;
+            }
+            
+            .star-images {
+                gap: 15px;
+                margin: 40px 0;
+                width: 100%;
+                padding: 0 20px;
+            }
+            
+            .star-image {
+                flex: 1;
+                max-width: 180px;
+                width: 100%;
+            }
+        }
+        
+        /* スマホ版での最適化（768px未満） */
+        @media (max-width: 767px) {
+            .left-sidebar,
+            .right-sidebar {
+                display: none !important;
+            }
+            
+            .main-content {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 15px;
+                max-width: 100% !important;
+            }
+            
+            .hero {
+                padding: 40px 15px 80px;
+                min-height: 600px;
             }
             
             .hero .doctor-image {
                 height: 240px !important;
                 left: calc(10% - 40px) !important;
-                bottom: -60px !important;
+                bottom: -80px !important;
             }
             
             .section {
@@ -132,6 +417,11 @@
             
             .campaign-card {
                 margin-bottom: 20px;
+            }
+            
+            .campaign-image {
+                max-height: 500px;
+                padding: 15px;
             }
             
             .special-campaign {
@@ -188,7 +478,7 @@
             
             .star-images {
                 gap: 5px;
-                margin: 20px 0;
+                margin: 30px 0;
                 width: 100%;
                 padding: 0 10px;
             }
@@ -269,6 +559,8 @@
             padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 10;
         }
         
         .section-title {
@@ -301,7 +593,7 @@
         /* キャンペーンセクション */
         .campaign-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: 1fr;
             gap: 30px;
             margin-bottom: 60px;
         }
@@ -335,9 +627,11 @@
         
         .campaign-image {
             width: 100%;
-            height: 250px;
+            height: auto;
+            max-height: 600px;
             object-fit: contain;
             background: #f8f9fa;
+            padding: 20px;
         }
         
         .campaign-content {
@@ -384,6 +678,57 @@
         .campaign-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(102,126,234,0.3);
+        }
+        
+        /* こんな方にオススメ！セクション */
+        .recommendation-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        
+        .recommendation-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+        
+        .recommendation-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .recommendation-list li {
+            background: white;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 35px;
+        }
+        
+        .recommendation-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ff6b6b;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .recommendation-list li:last-child {
+            margin-bottom: 0;
         }
         
         /* スペシャルキャンペーン */
@@ -445,7 +790,7 @@
             gap: 30px;
         }
         
-        @media (min-width: 769px) {
+        @media (min-width: 1024px) {
             .flow-step {
                 gap: 40px;
             }
@@ -561,6 +906,11 @@
             padding: 60px 20px;
             text-align: center;
             margin: 0;
+            position: relative;
+            z-index: 10;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
         }
         
         .cta-section h2 {
@@ -590,7 +940,7 @@
         /* トップへ戻るボタン */
         .scroll-to-top {
             position: fixed;
-            bottom: 80px;
+            bottom: 120px;
             right: 20px;
             width: 50px;
             height: 50px;
@@ -651,7 +1001,7 @@
         
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr;
             gap: 30px;
         }
         
@@ -690,13 +1040,16 @@
         /* 院長紹介 */
         .doctor-intro {
             display: flex;
+            flex-direction: column;
             gap: 30px;
             margin-bottom: 40px;
-            align-items: flex-start;
+            align-items: center;
+            text-align: center;
         }
         
         .doctor-image {
             flex-shrink: 0;
+            align-self: center;
         }
         
         .doctor-info h4 {
@@ -705,16 +1058,24 @@
             margin-bottom: 15px;
             font-family: 'Zen Maru Gothic', sans-serif;
             font-weight: 700;
+            text-align: center;
         }
         
         .doctor-info ul {
             margin-top: 10px;
             padding-left: 20px;
+            text-align: left;
         }
         
         .doctor-info li {
             margin-bottom: 5px;
             color: #666;
+            text-align: left;
+        }
+        
+        .doctor-info p {
+            text-align: center;
+            line-height: 1.8;
         }
         
         .clinic-overview {
@@ -762,7 +1123,7 @@
         /* 症例紹介セクション */
         .case-study-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: 1fr;
             gap: 30px;
             margin-bottom: 40px;
         }
@@ -809,7 +1170,7 @@
         }
         
         .case-images {
-            padding: 20px;
+            padding: 30px;
             background: #f8f9fa;
         }
         
@@ -835,8 +1196,9 @@
         .case-image {
             width: 100%;
             height: auto;
+            max-height: 500px;
             border-radius: 10px;
-            object-fit: cover;
+            object-fit: contain;
             transition: transform 0.3s ease;
         }
         
@@ -947,10 +1309,10 @@
         
         .clinic-branches {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
             margin: 30px 0;
-            max-width: 700px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -968,10 +1330,10 @@
         
 
         
-        @media (max-width: 768px) {
+        @media (max-width: 1023px) {
             .clinic-branches {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
+                gap: 10px;
                 max-width: 100%;
             }
             
@@ -1008,7 +1370,7 @@
             text-decoration: underline;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 1023px) {
             .case-study-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -1024,6 +1386,14 @@
             }
             
             .case-content {
+                padding: 20px;
+            }
+            
+            .case-image {
+                max-height: 400px;
+            }
+            
+            .case-images {
                 padding: 20px;
             }
         }
@@ -1073,9 +1443,52 @@
     </style>
 </head>
 <body>
-    <!-- ヒーローセクション -->
-    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/ELM15.jpg'); background-size: cover; background-position: center;">
+    <!-- PC版左右固定要素 -->
+    <div class="pc-side-element left" style="display: none;">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+            <h3 style="color: #2c3e50; margin-bottom: 20px; font-size: 20px; text-align: center;">ELM CLINIC<br>神戸院</h3>
+            <p style="color: #495057; line-height: 1.6; font-size: 14px; margin-bottom: 25px; text-align: center;">神戸三宮駅徒歩5分<br>完全個室対応</p>
+            <div style="padding: 15px; background: rgba(255,255,255,0.9); border-radius: 10px; margin-bottom: 15px; text-align: center; width: 100%; box-sizing: border-box;">
+                <p style="color: #333; font-size: 14px; margin: 0; font-weight: 600;">年間症例2万件超</p>
+                <p style="color: #666; font-size: 12px; margin: 8px 0 0 0;">開院14年の実績</p>
+            </div>
+            <div style="padding: 15px; background: rgba(255,255,255,0.9); border-radius: 10px; margin-bottom: 15px; text-align: center; width: 100%; box-sizing: border-box;">
+                <p style="color: #333; font-size: 14px; margin: 0; font-weight: 600;">アートメイク7000件以上</p>
+                <p style="color: #666; font-size: 12px; margin: 8px 0 0 0;">豊富な実績</p>
+            </div>
+            <div style="padding: 15px; background: rgba(255,255,255,0.9); border-radius: 10px; margin-bottom: 15px; text-align: center; width: 100%; box-sizing: border-box;">
+                <p style="color: #333; font-size: 14px; margin: 0; font-weight: 600;">★★★★★ 4.63</p>
+                <p style="color: #666; font-size: 12px; margin: 8px 0 0 0;">ホットペッパービューティー</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pc-side-element right" style="display: none;">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+            <h3 style="color: #2c3e50; margin-bottom: 20px; font-size: 20px; text-align: center;">［院長］<br>七里 阿寿美</h3>
+            <p style="color: #495057; line-height: 1.6; font-size: 14px; margin-bottom: 25px; text-align: center;">小児科専門医による<br>安全で確実な治療</p>
+            <div style="padding: 15px; background: rgba(255,255,255,0.9); border-radius: 10px; margin-bottom: 15px; text-align: center;">
+                <p style="color: #333; font-size: 14px; margin: 0; font-weight: 600;">★★★★★ 4.63</p>
+                <p style="color: #666; font-size: 12px; margin: 8px 0 0 0;">ホットペッパービューティー</p>
+            </div>
+            <div style="padding: 15px; background: rgba(255,255,255,0.3); border-radius: 10px; margin-bottom: 15px; text-align: center;">
+                <p style="color: #2c3e50; font-size: 12px; margin: 0; font-style: italic; line-height: 1.5;">「先生の説明がとても分かりやすく、安心して施術を受けられました」</p>
+            </div>
+            <div style="padding: 15px; background: rgba(255,255,255,0.3); border-radius: 10px; margin-bottom: 15px; text-align: center;">
+                <p style="color: #2c3e50; font-size: 12px; margin: 0; font-style: italic; line-height: 1.5;">「清潔で落ち着いた雰囲気で、リラックスして施術を受けられました」</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- メインコンテンツ -->
+    <div class="main-content">
+        <!-- ヒーローセクション -->
+    <section class="hero">
         <div class="hero-content">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h2 style="font-family: 'Inter', 'Noto Sans JP', sans-serif; font-size: 24px; font-weight: 400; letter-spacing: 0.2em; color: white; text-transform: uppercase; margin: 0;">ELM CLINIC</h2>
+            </div>
             <h1 style="font-family: 'Shippori Mincho B1', serif;"><span style="font-size: 0.7em;">神戸で選ばれる美容皮膚科</span><br>エルムクリニック神戸院</h1>
             <p class="hero-subtitle">より自然に美しく。<br class="mobile-br">鏡を見るのが嬉しくなる毎日を。</p>
             
@@ -1085,15 +1498,26 @@
                 <img src="imgs/star_3.png" alt="エルムクリニック神戸院 評価スター3" class="star-image">
             </div>
             
-            <div style="position: relative; display: flex; justify-content: center; align-items: flex-end; margin-top: 30px;">
-                <img src="imgs/dr_shichiri_N.png" alt="七里院長" class="doctor-image" style="position: absolute; bottom: -80px; left: 20%; height: 320px; width: auto; z-index: 1;">
+            <img src="imgs/dr_shichiri_N.png" alt="七里院長" class="doctor-image" style="position: absolute; bottom: -120px; left: 20%; height: 320px; width: auto; z-index: 1;">
+            
+            <div style="display: flex; justify-content: center; margin-top: 30px;">
                 <a href="#contact" class="cta-button" style="z-index: 2; position: relative;">無料カウンセリング予約</a>
             </div>
         </div>
     </section>
     
+    <!-- ナビゲーションボタン -->
+    <section class="section" style="padding: 40px 20px; background: #f8f9fa;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 600px; margin: 0 auto;">
+            <a href="#campaign" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">キャンペーン</a>
+            <a href="#special" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">スペシャルキャンペーン</a>
+            <a href="#recommend" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">おすすめ施術</a>
+            <a href="#about" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">当院について</a>
+        </div>
+    </section>
+    
     <!-- 6月キャンペーン -->
-    <section class="section">
+    <section class="section" id="campaign">
         <h2 class="section-title">6月限定キャンペーン</h2>
         <p class="section-subtitle">人気施術が特別価格でご提供。<br class="mobile-br">この機会をお見逃しなく！</p>
         
@@ -1102,21 +1526,37 @@
                 <div class="campaign-tag">01</div>
                 <img src="imgs/kobe6_1-13.jpg" alt="ハイドラフェイシャル" class="campaign-image">
                 <div class="campaign-content">
-                    <h3 class="campaign-title">ハイドラフェイシャル</h3>
-                    <div class="campaign-price">初回 ¥9,800 <small style="text-decoration: line-through; color: #999;">¥16,500</small></div>
                     <p class="campaign-description">毛穴の汚れと古い角質を一掃。即効性の高い美肌治療で、施術直後から肌の変化を実感していただけます。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>毛穴の黒ずみや角栓が気になる方</li>
+                            <li>肌のくすみやザラつきを改善したい方</li>
+                            <li>化粧のりが悪く、メイクが浮いてしまう方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('hydra-facial')" class="campaign-button">ニキビ治療セットについて詳しくみる</a>
                 </div>
             </div>
             
             <div class="campaign-card fade-in">
                 <div class="campaign-tag">02</div>
-                <img src="imgs/kobe6_2-14.jpg" alt="高濃度ビタミンC点滴" class="campaign-image">
+                <img src="imgs/kobe6_2-14.jpg" alt="ハイドラフェイシャル" class="campaign-image">
                 <div class="campaign-content">
-                    <h3 class="campaign-title">高濃度ビタミンC点滴</h3>
-                    <div class="campaign-price">初回 ¥7,700 <small style="text-decoration: line-through; color: #999;">¥11,000</small></div>
-                    <p class="campaign-description">美白・美肌・アンチエイジング効果。内側から輝く美しさを手に入れる人気の点滴治療です。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                    <p class="campaign-description">小鼻の黒ずみ、ザラつきに効果的。毛穴の汚れを徹底的に除去し、つるつるの美肌を実現する人気の施術です。</p>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>小鼻の黒ずみが気になる方</li>
+                            <li>肌のザラつきを改善したい方</li>
+                            <li>毛穴の汚れを除去したい方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('vitamin-c')" class="campaign-button">ハイドラフェイシャルについて詳しくみる</a>
                 </div>
             </div>
             
@@ -1124,32 +1564,56 @@
                 <div class="campaign-tag">03</div>
                 <img src="imgs/kobe6_4-16.jpg" alt="アートメイク" class="campaign-image">
                 <div class="campaign-content">
-                    <h3 class="campaign-title">眉アートメイク</h3>
-                    <div class="campaign-price">モニター価格 ¥59,800 <small style="text-decoration: line-through; color: #999;">¥89,600</small></div>
-                    <p class="campaign-description">自然で美しい眉毛を実現。朝のメイク時間短縮にも効果的。医療従事者による安全な施術です。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                    <p class="campaign-description">夏に向け、落ちない最強メイク。自然で美しい眉毛を実現し、朝のメイク時間短縮にも効果的。医療従事者による安全な施術です。</p>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>眉毛が薄く、メイクに時間がかかる方</li>
+                            <li>夏でも落ちないメイクを希望する方</li>
+                            <li>自然で美しい眉毛を手に入れたい方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('art-makeup')" class="campaign-button">アートメイクについて詳しくみる</a>
                 </div>
             </div>
             
             <div class="campaign-card fade-in">
                 <div class="campaign-tag">04</div>
-                <img src="imgs/kobe6_7-23.jpg" alt="ピコレーザー" class="campaign-image">
+                <img src="imgs/kobe6_7-23.jpg" alt="マッサージピール" class="campaign-image">
                 <div class="campaign-content">
-                    <h3 class="campaign-title">ピコトーニング</h3>
-                    <div class="campaign-price">トライアル ¥9,900 <small style="text-decoration: line-through; color: #999;">¥16,500</small></div>
-                    <p class="campaign-description">シミ・くすみ・肝斑に効果的。ダウンタイムが少なく、お肌に優しい最新レーザー治療です。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                    <p class="campaign-description">コラーゲン生成を促進し、ハリ・ツヤのあるお肌へ。痛みが少なく人気の治療です。</p>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>肌のハリやツヤを改善したい方</li>
+                            <li>痛みの少ない治療を希望する方</li>
+                            <li>コラーゲン生成を促進したい方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('pico-laser')" class="campaign-button">マッサージピールについて詳しくみる</a>
                 </div>
             </div>
             
             <div class="campaign-card fade-in">
                 <div class="campaign-tag">05</div>
-                <img src="imgs/kobe6_8-24.jpg" alt="マッサージピール" class="campaign-image">
+                <img src="imgs/kobe6_8-24.jpg" alt="フォトフェイシャル" class="campaign-image">
                 <div class="campaign-content">
-                    <h3 class="campaign-title">マッサージピール</h3>
-                    <div class="campaign-price">トライアル ¥8,800 <small style="text-decoration: line-through; color: #999;">¥13,200</small></div>
-                    <p class="campaign-description">コラーゲン生成を促進し、ハリ・ツヤのあるお肌へ。痛みが少なく人気の治療です。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                    <p class="campaign-description">シミや毛穴を徹底ケア！お肌の悩みを解決するトライアル限定の施術です。</p>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>シミや毛穴が気になる方</li>
+                            <li>トライアル価格で試してみたい方</li>
+                            <li>お肌の悩みを解決したい方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('massage-peel')" class="campaign-button">フォトフェイシャルについて詳しくみる</a>
                 </div>
             </div>
         </div>
@@ -1162,208 +1626,146 @@
     </section>
     
     <!-- スペシャルキャンペーン -->
-    <section class="section">
+    <section class="section" id="special">
         <div class="special-campaign fade-in">
             <h2 class="special-title">スペシャルキャンペーン</h2>
             <p class="special-subtitle">今月だけの特別企画！人気施術の組み合わせプランをご用意</p>
             
             <div class="campaign-grid" style="margin-top: 30px;">
                 <div class="campaign-card">
-                    <img src="imgs/kobe6_SP1-10.jpg" alt="ぷるたまヒアルロン酸" class="campaign-image">
+                    <img src="imgs/kobe6_SP1-10.jpg" alt="ジュビダームビスタ ボライトXC" class="campaign-image">
                     <div class="campaign-content">
-                        <h3 class="campaign-title">ぷるたまヒアルロン酸注射</h3>
-                        <div class="campaign-price">¥59,800 <small style="text-decoration: line-through; color: #999;">¥89,600</small></div>
-                        <p class="campaign-description">話題のボライトXCで、内側から輝くような美肌を実現。水光注射とのコンビネーション治療です。</p>
-                        <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                        <p class="campaign-description">肌質改善に特化した、新しいヒアルロン酸。ジュビダームビスタ ボライトXCでぷるたまヒアルを実現。</p>
+                        
+                        <div class="recommendation-section">
+                            <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                            <ul class="recommendation-list">
+                                <li>肌質改善を希望する方</li>
+                                <li>新しいヒアルロン酸治療を試したい方</li>
+                                <li>ぷるたまヒアル効果を期待する方</li>
+                            </ul>
+                        </div>
+                        
+                        <a href="javascript:void(0)" onclick="openModal('purutama')" class="campaign-button">ジュビダームビスタ ボライトXCについて詳しくみる</a>
                     </div>
                 </div>
                 
                 <div class="campaign-card">
                     <img src="imgs/kobe6_SP2-11.jpg" alt="エルムリフト" class="campaign-image">
                     <div class="campaign-content">
-                        <h3 class="campaign-title">エルムリフト</h3>
-                        <div class="campaign-price">モニター価格 ¥160,000 <small style="text-decoration: line-through; color: #999;">¥240,000</small></div>
-                        <p class="campaign-description">メスを使わないリフトアップ。糸による自然な引き上げ効果で若々しい印象に。</p>
-                        <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                        <p class="campaign-description">自分史上、最高峰の小顔へ。モニター限定で最大17%OFFの特別価格でエルムリフトを体験。</p>
+                        
+                        <div class="recommendation-section">
+                            <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                            <ul class="recommendation-list">
+                                <li>小顔効果を希望する方</li>
+                                <li>モニター価格で試してみたい方</li>
+                                <li>最高峰のリフトアップ効果を求める方</li>
+                            </ul>
+                        </div>
+                        
+                        <a href="javascript:void(0)" onclick="openModal('elm-lift')" class="campaign-button">エルムリフトについて詳しくみる</a>
                     </div>
                 </div>
                 
                 <div class="campaign-card">
                     <img src="imgs/kobe6_SP3-12.jpg" alt="サブシジョン+ジュベルック" class="campaign-image">
                     <div class="campaign-content">
-                        <h3 class="campaign-title">サブシジョン+ジュベルック</h3>
-                        <div class="campaign-price">モニター価格 ¥198,000 <small style="text-decoration: line-through; color: #999;">¥298,000</small></div>
-                        <p class="campaign-description">ニキビ跡・毛穴の根本治療。サブシジョンとジュベルックの組み合わせで効果的な治療を。</p>
-                        <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                        <p class="campaign-description">深いニキビ跡、クレーターを改善。サブシジョンとジュベルックの組み合わせで最大40%OFF。</p>
+                        
+                        <div class="recommendation-section">
+                            <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                            <ul class="recommendation-list">
+                                <li>深いニキビ跡やクレーターが気になる方</li>
+                                <li>毛穴の改善を求める方</li>
+                                <li>効果的な組み合わせ治療を期待する方</li>
+                            </ul>
+                        </div>
+                        
+                        <a href="javascript:void(0)" onclick="openModal('subcision')" class="campaign-button">サブシジョン+ジュベルックについて詳しくみる</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- 院長症例紹介 -->
-    <section class="section">
-        <h2 class="section-title">院長症例のご紹介</h2>
-        <p class="section-subtitle">七里院長が手がけた実際の症例をご紹介いたします。<br class="mobile-br">※効果には個人差があります</p>
-        
-        <div class="case-study-grid">
-            <div class="case-study-card fade-in">
-                <div class="case-study-header">
-                    <h3 class="case-title">ヒアルロン酸による全顔リフトアップ</h3>
-                    <div class="case-tag">症例01</div>
-                </div>
-                <div class="case-images">
-                    <img src="imgs/shichiri_case_hyalu.jpg" alt="ヒアルロン酸による全顔リフトアップ症例 Before/After" class="case-image">
-                </div>
-                <div class="case-content">
-                    <div class="case-details">
-                        <h4>施術内容</h4>
-                        <p>ヒアルロン酸（ジュビダームビスタ）4本</p>
-                        
-                        <h4>施術金額</h4>
-                        <p class="case-price">¥219,200</p>
-                        
-                        <h4>施術のポイント</h4>
-                        <p>顔全体のたるみや疲れた印象が気になる方におすすめです。複数本のヒアルロン酸を使って全体的にリフトアップし、明るい印象に改善します。複数個所に注入することでナチュラルな変化が期待できます。</p>
-                        
-                        <h4>副作用・リスク</h4>
-                        <p class="case-risk">赤み・腫れ・かゆみ・痛み・しこり・アレルギー反応</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="case-study-card fade-in">
-                <div class="case-study-header">
-                    <h3 class="case-title">ヒアルロン酸による額の改善</h3>
-                    <div class="case-tag">症例02</div>
-                </div>
-                <div class="case-images">
-                    <img src="imgs/shichiri_case_hyalu_hitai.jpg" alt="ヒアルロン酸による額の改善症例 Before/After" class="case-image">
-                </div>
-                <div class="case-content">
-                    <div class="case-details">
-                        <h4>施術内容</h4>
-                        <p>額ヒアルロン酸（ジュビダームビスタ）2本</p>
-                        
-                        <h4>施術金額</h4>
-                        <p class="case-price">¥119,600</p>
-                        
-                        <h4>施術のポイント</h4>
-                        <p>額に丸みを出すことでバランスのとれた横顔になります。ご理想に応じてヒアルロン酸の使用本数は調節可能です。細かいシワにも効果が得られ、ボトックスとの併用もおすすめです。</p>
-                        
-                        <h4>副作用・リスク</h4>
-                        <p class="case-risk">赤み・腫れ・かゆみ・痛み・しこり・アレルギー反応</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="case-study-card fade-in">
-                <div class="case-study-header">
-                    <h3 class="case-title">エルムリフトによる糸リフト</h3>
-                    <div class="case-tag">症例03</div>
-                </div>
-                <div class="case-images">
-                    <img src="imgs/shichiri_case_elmlift_1.jpg" alt="エルムリフトによる糸リフト症例 Before/After" class="case-image">
-                </div>
-                <div class="case-content">
-                    <div class="case-details">
-                        <h4>施術内容</h4>
-                        <p>エルムリフト 8本</p>
-                        
-                        <h4>施術金額</h4>
-                        <p class="case-price">¥160,000</p>
-                        
-                        <h4>施術のポイント</h4>
-                        <p>引き上げ効果のある糸をつかってたるみを引き上げ、逆三角形のフェイスラインを作ります。頬のボリュームがあり、リフトアップ効果を求める方におすすめです。</p>
-                        
-                        <h4>副作用・リスク</h4>
-                        <p class="case-risk">赤み・腫れ・かゆみ・痛み・しこり・アレルギー反応・内出血</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="case-study-card fade-in">
-                <div class="case-study-header">
-                    <h3 class="case-title">エルムリフト（フェイスライン改善）</h3>
-                    <div class="case-tag">症例04</div>
-                </div>
-                <div class="case-images">
-                    <img src="imgs/shichiri_case_elmlift_2.jpg" alt="エルムリフトによるフェイスライン改善症例 Before/After" class="case-image">
-                </div>
-                <div class="case-content">
-                    <div class="case-details">
-                        <h4>施術内容</h4>
-                        <p>エルムVリフト</p>
-                        
-                        <h4>施術金額</h4>
-                        <p class="case-price">¥120,000</p>
-                        
-                        <h4>施術のポイント</h4>
-                        <p>ダウンタイムの少ない糸を使用し、顎下の脂肪を引き上げます。
-                            二重顎の改善や横顔の印象を改善する効果が期待できます。顎やフェイスラインのヒアルロン酸、顔のスレッドリフトとの併用もおすすめです。</p>
-                        
-                        <h4>副作用・リスク</h4>
-                        <p class="case-risk">赤み・腫れ・かゆみ・痛み・しこり・アレルギー反応・内出血</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="case-study-notice">
-            <p><strong>※重要事項</strong></p>
-            <ul>
-                <li>施術効果には個人差があります</li>
-                <li>記載の金額は税込価格です</li>
-                <li>施術前に必ずカウンセリングを受診していただきます</li>
-                <li>副作用・リスクについて詳しくは診察時にご説明いたします</li>
-                <li>詳細な症例写真は<a href="https://www.elm-clinic.jp/doctor/asumi_shichiri/" target="_blank" rel="noopener">公式サイト</a>でご確認いただけます</li>
-            </ul>
-        </div>
-    </section>
+
     
     <!-- おすすめ施術 -->
-    <section class="section">
+    <section class="section" id="recommend">
         <h2 class="section-title">おすすめ施術</h2>
         <p class="section-subtitle">患者様に特に人気の高い施術をご紹介</p>
         
         <div class="campaign-grid">
             <div class="campaign-card fade-in">
-                <img src="imgs/kobe_9_rec_1.jpg" alt="フォトフェイシャル" class="campaign-image">
+                <img src="imgs/kobe_9_rec_1.jpg" alt="ハイドラフェイシャル" class="campaign-image">
                 <div class="campaign-content">
-                    <h3 class="campaign-title">フォトフェイシャル</h3>
-                    <div class="campaign-price">¥19,800</div>
-                    <p class="campaign-description">シミ・そばかす・赤ら顔を同時に改善。肌質改善効果も期待できる光治療です。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
-                </div>
-            </div>
-            
-            <div class="campaign-card fade-in">
-                <img src="imgs/kobe_7_recommend_1-1024x1024.jpg" alt="ハイドラフェイシャル" class="campaign-image">
-                <div class="campaign-content">
-                    <h3 class="campaign-title">ハイドラフェイシャル</h3>
-                    <div class="campaign-price">¥16,500</div>
                     <p class="campaign-description">毛穴の汚れを徹底除去し、美容成分を導入。即効性の高い美肌治療として大変人気です。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>毛穴の汚れや黒ずみが気になる方</li>
+                            <li>即効性の高い美肌治療を求める方</li>
+                            <li>美容成分の導入効果を期待する方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('hydra-facial')" class="campaign-button">ハイドラフェイシャルについて詳しくみる</a>
                 </div>
             </div>
             
             <div class="campaign-card fade-in">
-                <img src="imgs/kobe_7_recommend_2-1024x1024.jpg" alt="マッサージピール" class="campaign-image">
+                <img src="imgs/kobe_7_recommend_1-1024x1024.jpg" alt="ほくろ除去 CO2レーザー" class="campaign-image">
                 <div class="campaign-content">
-                    <h3 class="campaign-title">マッサージピール</h3>
-                    <div class="campaign-price">¥13,200</div>
-                    <p class="campaign-description">コラーゲン生成を促進し、ハリ・弾力のある美肌へ。痛みが少なく安全性の高い治療です。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
-                </div>
-            </div>
-            
-            <div class="campaign-card fade-in">
-                <img src="imgs/kobe_7_recommend_3-1024x1024.jpg" alt="ほくろ・いぼ除去" class="campaign-image">
-                <div class="campaign-content">
-                    <h3 class="campaign-title">ほくろ・いぼ除去</h3>
-                    <div class="campaign-price">¥5,500～</div>
                     <p class="campaign-description">CO2レーザーによる安全で確実な除去。跡が残りにくく、美しい仕上がりを実現します。</p>
-                    <a href="#contact" class="campaign-button">症例写真を見てみる</a>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>ほくろやいぼを安全に除去したい方</li>
+                            <li>跡が残りにくい治療を求める方</li>
+                            <li>美しい仕上がりを期待する方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('mole-removal')" class="campaign-button">ほくろ除去 CO2レーザーについて詳しくみる</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <img src="imgs/kobe_7_recommend_2-1024x1024.jpg" alt="シミとり（ピコスポット）" class="campaign-image">
+                <div class="campaign-content">
+                    <p class="campaign-description">ピコスポットレーザーによるシミの除去。ダウンタイムが少なく、効果的なシミ治療です。</p>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>シミやそばかすが気になる方</li>
+                            <li>ダウンタイムの少ない治療を希望する方</li>
+                            <li>効果的なシミ治療を求める方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('pico-spot')" class="campaign-button">シミとり（ピコスポット）について詳しくみる</a>
+                </div>
+            </div>
+            
+            <div class="campaign-card fade-in">
+                <img src="imgs/kobe_7_recommend_3-1024x1024.jpg" alt="メディカルダイエット（サノレックス）" class="campaign-image">
+                <div class="campaign-content">
+                    <p class="campaign-description">医療用ダイエット薬サノレックスによる安全で効果的な体重管理。医師の指導のもとで行います。</p>
+                    
+                    <div class="recommendation-section">
+                        <h4 class="recommendation-title">こんな方にオススメ！</h4>
+                        <ul class="recommendation-list">
+                            <li>効果的なダイエットを希望する方</li>
+                            <li>医師の指導のもとで安全に痩せたい方</li>
+                            <li>医療用ダイエット薬を試してみたい方</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="javascript:void(0)" onclick="openModal('medical-diet')" class="campaign-button">メディカルダイエット（サノレックス）について詳しくみる</a>
                 </div>
             </div>
         </div>
@@ -1373,7 +1775,7 @@
     <section class="section">
         <div class="fade-in" style="background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%); padding: 40px; border-radius: 25px; text-align: center; margin-bottom: 60px; position: relative; overflow: hidden;">
             <h2 class="special-title" style="color: #2c3e50; font-family: 'Shippori Mincho B1', serif;">施術が不安な方へ</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 30px;">
                 <div style="background: white; padding: 20px; border-radius: 15px; text-align: left;">
                     <h4 style="color: #ff6b6b; margin-bottom: 10px; font-family: 'Noto Sans JP', sans-serif;">🤝 無理な勧誘は一切ありません</h4>
                     <p style="color: #555; font-size: 14px; line-height: 1.6; font-family: 'Noto Sans JP', sans-serif;">カウンセリングでは、患者様のお悩みを丁寧にお聞きし、最適な治療をご提案いたします。治療を強制することは一切ございません。</p>
@@ -1531,7 +1933,7 @@
     </section>
     
     <!-- クリニック情報 -->
-    <section class="section">
+    <section class="section" id="about">
         <!-- クリニックヒーローセクション -->
         <div class="clinic-hero fade-in" style="
             position: relative;
@@ -1610,40 +2012,43 @@
                 <div class="doctor-info">
                     <h4>院長：七里 阿寿美（しちり あすみ）</h4>
                     <p>美容のお悩みはひとりひとり違っていて、他人に共感されないことがコンプレックスに繋がっていることもあります。美容医療はなくても生きていけますが、そういったお悩みは精神的にQOLを下げてしまいます。プラスアルファの治療であるからこそ、妥協せずにしっかりお悩みを伺い、適切な治療を提案していきたいと思っています。</p>
-                    <p><strong>経歴</strong></p>
-                    <ul>
-                        <li>2015年 神戸大学医学部卒業</li>
-                        <li>2015年 神戸大学医学部附属病院、その他関連病院で初期研修</li>
-                        <li>2017年 神戸大学医学部附属病院関連病院で小児科研修</li>
-                        <li>2021年 小児科専門医取得</li>
-                    </ul>
+                    
+                    <div style="margin-top: 40px;">
+                        <p style="text-align: left; font-weight: 600; margin-bottom: 15px;"><strong>経歴</strong></p>
+                        <ul style="text-align: left; padding-left: 20px;">
+                            <li>2015年 神戸大学医学部卒業</li>
+                            <li>2015年 神戸大学医学部附属病院、その他関連病院で初期研修</li>
+                            <li>2017年 神戸大学医学部附属病院関連病院で小児科研修</li>
+                            <li>2021年 小児科専門医取得</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
 
             
-            <div class="info-grid">
-                <div class="info-item">
+            <div class="info-grid" style="max-width: 800px; margin: 0 auto; text-align: left;">
+                <div class="info-item" style="text-align: left;">
                     <div class="info-icon">📍</div>
-                    <div class="info-content">
-                        <h4>アクセス</h4>
-                        <p>〒650-0021<br>神戸市中央区下山手通3-1-21 東栄ビル4階<br>阪急電鉄「神戸三宮駅」より徒歩5分</p>
+                    <div class="info-content" style="text-align: left;">
+                        <h4 style="text-align: left;">アクセス</h4>
+                        <p style="text-align: left;">〒650-0021<br>神戸市中央区下山手通3-1-21 東栄ビル4階<br>阪急電鉄「神戸三宮駅」より徒歩5分</p>
                     </div>
                 </div>
                 
-                <div class="info-item">
+                <div class="info-item" style="text-align: left;">
                     <div class="info-icon">🕐</div>
-                    <div class="info-content">
-                        <h4>営業時間</h4>
-                        <p>AM9:00 - PM6:00<br>定休日：不定休<br>完全予約制</p>
+                    <div class="info-content" style="text-align: left;">
+                        <h4 style="text-align: left;">営業時間</h4>
+                        <p style="text-align: left;">AM9:00 - PM6:00<br>定休日：不定休<br>完全予約制</p>
                     </div>
                 </div>
                 
-                <div class="info-item">
+                <div class="info-item" style="text-align: left;">
                     <div class="info-icon">📞</div>
-                    <div class="info-content">
-                        <h4>お問い合わせ</h4>
-                        <p>TEL: 078-335-6025<br>Webからの予約も24時間受付中</p>
+                    <div class="info-content" style="text-align: left;">
+                        <h4 style="text-align: left;">お問い合わせ</h4>
+                        <p style="text-align: left;">TEL: 078-335-6025<br>Webからの予約も24時間受付中</p>
                     </div>
                 </div>
                 
@@ -1717,29 +2122,115 @@
         <a href="#" class="cta-button">Web予約はこちら</a>
     </section>
     
-    <!-- 固定CTAボタン（スマホ用） -->
-    <div class="fixed-cta">
-        <a href="tel:078-335-6025" class="fixed-cta-button">
-            📞 今すぐ電話で予約
-        </a>
+        <!-- 固定CTAボタン（スマホ用） -->
+        <div class="fixed-cta">
+            <a href="tel:078-335-6025" class="fixed-cta-button">
+                📞 今すぐ電話で予約
+            </a>
+        </div>
+        
+        <!-- トップへ戻るボタン -->
+        <button class="scroll-to-top" id="scrollToTop">
+            ↑
+        </button>
+        
+        <!-- フッター -->
+        <footer style="background: #2c3e50; color: white; text-align: center; padding: 30px 20px 120px 20px; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%);">
+            <div style="margin-bottom: 15px;">
+                <a href="#" style="color: #bbb; text-decoration: none; font-size: 14px;">プライバシーポリシー</a>
+            </div>
+            <p style="margin: 0; font-size: 12px; opacity: 0.8;">
+                Copyright © 2025 ELM CLINIC. All rights reserved.
+            </p>
+        </footer>
     </div>
     
-    <!-- トップへ戻るボタン -->
-    <button class="scroll-to-top" id="scrollToTop">
-        ↑
-    </button>
-    
-    <!-- フッター -->
-    <footer style="background: #2c3e50; color: white; text-align: center; padding: 30px 20px;">
-        <div style="margin-bottom: 15px;">
-            <a href="#" style="color: #bbb; text-decoration: none; font-size: 14px;">プライバシーポリシー</a>
+    <!-- モーダル -->
+    <div id="treatmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="modalIframe" class="modal-iframe" src=""></iframe>
         </div>
-        <p style="margin: 0; font-size: 12px; opacity: 0.8;">
-            Copyright © 2025 ELM CLINIC. All rights reserved.
-        </p>
-    </footer>
+    </div>
     
     <script>
+        // モーダル機能
+        function openModal(treatmentType) {
+            const modal = document.getElementById('treatmentModal');
+            const iframe = document.getElementById('modalIframe');
+            
+            // 施術タイプに応じてエルムクリニック公式サイトのURLを設定
+            let url = 'https://www.elm-clinic.jp';
+            
+            // 特定の施術ページがある場合は追加
+            switch(treatmentType) {
+                case 'hydra-facial':
+                    url = 'https://www.elm-clinic.jp/treatment/hydrafacial/'; // ハイドラフェイシャル
+                    break;
+                case 'vitamin-c':
+                    url = 'https://www.elm-clinic.jp/treatment/hydrafacial/'; // ハイドラフェイシャル
+                    break;
+                case 'art-makeup':
+                    url = 'https://www.elm-clinic.jp/treatment/medicalartmake/'; // 医療アートメイク
+                    break;
+                case 'pico-laser':
+                    url = 'https://www.elm-clinic.jp/treatment/massage_peel/'; // マッサージピール
+                    break;
+                case 'massage-peel':
+                    url = 'https://www.elm-clinic.jp/treatment/photofacial/'; // フォトフェイシャル
+                    break;
+                case 'purutama':
+                    url = 'https://www.elm-clinic.jp/treatment/hyaluron_jv_volite_xc/'; // ボライトXC
+                    break;
+                case 'elm-lift':
+                    url = 'https://www.elm-clinic.jp/treatment/thread_lift/elm_lift/'; // エルムリフト
+                    break;
+                case 'subcision':
+                    url = 'https://www.elm-clinic.jp/treatment/subscision/'; // サブシジョン
+                    break;
+                case 'photo-facial':
+                    url = 'https://www.elm-clinic.jp'; // まずはトップページで確認
+                    break;
+                case 'mole-removal':
+                    url = 'https://www.elm-clinic.jp/treatment/co2laser/'; // CO2レーザー
+                    break;
+                case 'pico-spot':
+                    url = 'https://www.elm-clinic.jp/treatment/picolaser/'; // ピコスポット
+                    break;
+                case 'medical-diet':
+                    url = 'https://www.elm-clinic.jp/treatment/diet/'; // 痩せたい（ダイエット）
+                    break;
+                default:
+                    url = 'https://www.elm-clinic.jp';
+            }
+            
+            iframe.src = url;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // スクロール防止
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('treatmentModal');
+            const iframe = document.getElementById('modalIframe');
+            modal.style.display = 'none';
+            iframe.src = '';
+            document.body.style.overflow = 'auto'; // スクロール復活
+        }
+        
+        // モーダル外クリックで閉じる
+        window.onclick = function(event) {
+            const modal = document.getElementById('treatmentModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // ESCキーでモーダルを閉じる
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
         // FAQトグル機能
         function toggleFaq(element) {
             const answer = element.nextElementSibling;
@@ -1780,7 +2271,12 @@
             const timeLeft = endDate - now;
             const daysLeft = Math.ceil(timeLeft / (1000 * 60 * 60 * 24));
             
-            document.getElementById('countdown').textContent = `あと${daysLeft}日`;
+            // メインカウントダウン
+            const mainCountdown = document.getElementById('countdown');
+            if (mainCountdown) {
+                mainCountdown.textContent = `あと${daysLeft}日`;
+            }
+            
         }
         
         updateCountdown();
@@ -1823,4 +2319,9 @@
         });
     </script>
 </body>
+</html> 
+</html> 
+</html> 
+</html> 
+</html> 
 </html> 
