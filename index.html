@@ -98,6 +98,9 @@
             background-color: #f8f9fa;
             margin: 0;
             padding: 0;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
             text-align: center;
         }
         
@@ -383,6 +386,12 @@
         
         /* スマホ版での最適化（768px未満） */
         @media (max-width: 767px) {
+            body {
+                display: block !important;
+                justify-content: initial !important;
+                align-items: initial !important;
+            }
+            
             .left-sidebar,
             .right-sidebar {
                 display: none !important;
@@ -391,8 +400,13 @@
             .main-content {
                 margin-left: 0 !important;
                 margin-right: 0 !important;
-                padding: 0 7px;
+                padding: 0 !important;
                 max-width: 100% !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                position: relative !important;
+                z-index: 10 !important;
+                background: transparent !important;
             }
             
             .hero {
@@ -407,26 +421,98 @@
             }
             
             .section {
-                padding: 40px 7px;
+                padding: 40px 0px !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                width: 100% !important;
+                position: relative !important;
+                z-index: 10 !important;
+                background: transparent !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* スペシャルキャンペーンのsectionを特別に制御 */
+            #special.section {
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100vw !important;
+                max-width: 100vw !important;
+                margin-left: calc(-50vw + 50%) !important;
+                margin-right: calc(-50vw + 50%) !important;
             }
             
             .campaign-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                width: 100% !important;
+                display: grid !important;
+                margin-bottom: 60px !important;
+            }
+            
+            /* スペシャルキャンペーン内のcampaign-gridを特別に制御 */
+            .special-campaign .campaign-grid {
+                margin: 30px 5px !important;
+                padding: 0 !important;
+                max-width: calc(100% - 10px) !important;
+                width: calc(100% - 10px) !important;
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                margin-bottom: 60px !important;
+                box-sizing: border-box !important;
             }
             
             .campaign-card {
-                margin-bottom: 20px;
+                margin-bottom: 20px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                border-radius: 0 !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* スペシャルキャンペーン内のcampaign-cardを特別に制御 */
+            .special-campaign .campaign-card {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 0 20px 0 !important;
+                border-radius: 0 !important;
+                box-sizing: border-box !important;
+            }
+            
+            .campaign-content {
+                padding: 0;
+            }
+            
+            .recommendation-section {
+                padding: 0;
+                border-radius: 0;
+            }
+            
+            .campaign-button {
+                padding: 12px 0;
+                border-radius: 0;
             }
             
             .campaign-image {
                 max-height: 600px;
-                padding: 7px;
+                padding: 0;
             }
             
             .special-campaign {
-                padding: 30px 10px;
-                margin-bottom: 40px;
+                padding: 30px 5px !important;
+                margin-bottom: 40px !important;
+                border-radius: 0 !important;
+                width: 100vw !important;
+                max-width: 100vw !important;
+                margin-left: calc(-50vw + 50%) !important;
+                margin-right: calc(-50vw + 50%) !important;
+                box-sizing: border-box !important;
+                position: relative !important;
+                z-index: 10 !important;
             }
             
             .flow-steps {
@@ -477,15 +563,14 @@
             }
             
             .star-images {
-                gap: 5px;
+                gap: 3px;
                 margin: 30px 0;
                 width: 100%;
-                padding: 0 10px;
             }
             
             .star-image {
                 flex: 1;
-                max-width: 150px;
+                max-width: calc((100% - 6px) / 3);
                 width: 100%;
             }
             
@@ -498,7 +583,7 @@
             }
             
             .special-campaign::before {
-                right: 100px;
+                display: none;
             }
             
             .mobile-br {
@@ -600,7 +685,7 @@
         
         .campaign-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 0;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -631,7 +716,7 @@
             max-height: 600px;
             object-fit: contain;
             background: #f8f9fa;
-            padding: 20px;
+            padding: 0;
         }
         
         .campaign-content {
@@ -735,7 +820,7 @@
         .special-campaign {
             background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
             padding: 40px;
-            border-radius: 25px;
+            border-radius: 0;
             text-align: center;
             margin-bottom: 60px;
             position: relative;
@@ -1508,7 +1593,7 @@
     
     <!-- ナビゲーションボタン -->
     <section class="section" style="padding: 40px 20px; background: #f8f9fa;">
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 600px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 100%; margin: 0 auto;">
             <a href="#campaign" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">キャンペーン</a>
             <a href="#special" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">スペシャルキャンペーン</a>
             <a href="#recommend" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">おすすめ施術</a>
@@ -1631,7 +1716,7 @@
             <h2 class="special-title">スペシャルキャンペーン</h2>
             <p class="special-subtitle">今月だけの特別企画！人気施術の組み合わせプランをご用意</p>
             
-            <div class="campaign-grid" style="margin-top: 30px;">
+            <div class="campaign-grid">
                 <div class="campaign-card">
                     <img src="imgs/kobe6_SP1-10.jpg" alt="ジュビダームビスタ ボライトXC" class="campaign-image">
                     <div class="campaign-content">
