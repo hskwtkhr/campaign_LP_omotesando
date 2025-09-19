@@ -137,6 +137,13 @@
         
         /* PC版でのレイアウト（1024px以上のみ） */
         @media (min-width: 1024px) {
+            /* True StoryセクションのPC版幅調整 */
+            #story .fade-in {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100% !important;
+            }
+            
             body {
                 text-align: center;
                 display: flex;
@@ -424,6 +431,13 @@
         
         /* タブレット版での最適化（768px〜1023px） */
         @media (min-width: 768px) and (max-width: 1023px) {
+            /* True Storyセクションのタブレット版幅調整 */
+            #story .fade-in {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100% !important;
+            }
+            
             .main-content {
                 max-width: 100% !important;
                 margin: 0 !important;
