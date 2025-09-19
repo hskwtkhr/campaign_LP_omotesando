@@ -124,11 +124,6 @@
                 position: relative;
             }
             
-            /* PC版での左右要素表示 */
-            .pc-side-element {
-                display: block !important;
-            }
-            
             /* PC版での左右固定要素 */
             .pc-side-element {
                 position: fixed;
@@ -144,6 +139,18 @@
                 flex-direction: column;
                 justify-content: center;
                 box-sizing: border-box;
+                opacity: 0;
+                transform: translateX(-100px);
+                transition: all 0.6s ease;
+            }
+            
+            .pc-side-element.right {
+                transform: translateX(100px);
+            }
+            
+            .pc-side-element.show {
+                opacity: 1;
+                transform: translateX(0);
             }
             
             .pc-side-element.left {
@@ -2510,6 +2517,22 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+        
+        // サイドバーのスクロール表示制御
+        const sideElements = document.querySelectorAll('.pc-side-element');
+        const showSidebarThreshold = 300; // 300pxスクロールしたら表示
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            sideElements.forEach(function(element) {
+                if (scrollTop > showSidebarThreshold) {
+                    element.classList.add('show');
+                } else {
+                    element.classList.remove('show');
+                }
             });
         });
     </script>
