@@ -468,6 +468,10 @@
         
         /* スマホ版での最適化（768px未満） */
         @media (max-width: 767px) {
+            /* True Storyセクションのアーチ調整 */
+            #story .fade-in {
+                clip-path: ellipse(140% 120% at 50% 100%) !important;
+            }
             body {
                 display: block !important;
                 justify-content: initial !important;
