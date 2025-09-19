@@ -142,25 +142,24 @@
                 opacity: 0;
                 transform: translateX(-100px);
                 transition: all 0.6s ease;
+                visibility: hidden;
             }
             
             .pc-side-element.right {
                 transform: translateX(100px);
+                background: url('imgs/AdobeStock_376924366_marble.jpeg') center/cover;
+                right: 15px;
             }
             
             .pc-side-element.show {
                 opacity: 1;
                 transform: translateX(0);
+                visibility: visible;
             }
             
             .pc-side-element.left {
                 background: url('imgs/AdobeStock_376924366_marble.jpeg') center/cover;
                 left: 15px;
-            }
-            
-            .pc-side-element.right {
-                background: url('imgs/AdobeStock_376924366_marble.jpeg') center/cover;
-                right: 15px;
             }
             
             /* 広いモニター（1400px以上）での幅拡大 */
@@ -189,7 +188,12 @@
                 }
             }
             
-
+            /* タブレット・スマホ版ではサイドバーを非表示 */
+            @media (max-width: 1023px) {
+                .pc-side-element {
+                    display: none !important;
+                }
+            }
             
             .hero {
                 min-height: 800px;
@@ -2521,20 +2525,38 @@
         });
         
         // サイドバーのスクロール表示制御
-        const sideElements = document.querySelectorAll('.pc-side-element');
-        const showSidebarThreshold = 300; // 300pxスクロールしたら表示
-        
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        function initSidebar() {
+            const sideElements = document.querySelectorAll('.pc-side-element');
+            const showSidebarThreshold = 300; // 300pxスクロールしたら表示
             
-            sideElements.forEach(function(element) {
-                if (scrollTop > showSidebarThreshold) {
-                    element.classList.add('show');
-                } else {
-                    element.classList.remove('show');
-                }
+            console.log('サイドバー要素数:', sideElements.length); // デバッグ用
+            
+            if (sideElements.length === 0) {
+                console.log('サイドバー要素が見つかりません。再試行します...');
+                setTimeout(initSidebar, 100);
+                return;
+            }
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                sideElements.forEach(function(element) {
+                    if (scrollTop > showSidebarThreshold) {
+                        element.classList.add('show');
+                        console.log('サイドバー表示'); // デバッグ用
+                    } else {
+                        element.classList.remove('show');
+                    }
+                });
             });
-        });
+        }
+        
+        // DOM読み込み完了後に実行
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSidebar);
+        } else {
+            initSidebar();
+        }
     </script>
     
     <!-- PC版サイドバー -->
