@@ -113,14 +113,22 @@
             z-index: 10;
         }
         
+        /* True Storyセクションの円形アーチ背景 */
+        #story .fade-in::before {
+            content: '';
+            position: absolute;
+            top: -300px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1000px;
+            height: 1000px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 25%, #ffb3b3 50%, #ffd6d6 75%, #ffe6e6 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
         /* PC版でのレイアウト（1024px以上のみ） */
         @media (min-width: 1024px) {
-            /* True Storyセクションのアーチを維持 */
-            #story .fade-in {
-                clip-path: ellipse(120% 100% at 50% 100%) !important;
-                border-radius: 25px 25px 0 0 !important;
-            }
-            
             body {
                 text-align: center;
                 display: flex;
@@ -408,12 +416,6 @@
         
         /* タブレット版での最適化（768px〜1023px） */
         @media (min-width: 768px) and (max-width: 1023px) {
-            /* True Storyセクションのアーチを維持 */
-            #story .fade-in {
-                clip-path: ellipse(120% 100% at 50% 100%) !important;
-                border-radius: 25px 25px 0 0 !important;
-            }
-            
             .main-content {
                 max-width: 100% !important;
                 margin: 0 !important;
@@ -480,11 +482,6 @@
         
         /* スマホ版での最適化（768px未満） */
         @media (max-width: 767px) {
-            /* True Storyセクションのアーチを維持 */
-            #story .fade-in {
-                clip-path: ellipse(120% 100% at 50% 100%) !important;
-                border-radius: 25px 25px 0 0 !important;
-            }
             body {
                 display: block !important;
                 justify-content: initial !important;
@@ -1864,7 +1861,7 @@
     
     <!-- 感動のストーリー -->
     <section class="section" id="story">
-        <div class="fade-in" style="background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 25%, #ffb3b3 50%, #ffd6d6 75%, #ffe6e6 100%); padding: 60px 40px; border-radius: 25px 25px 0 0; text-align: center; margin-bottom: 60px; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3); clip-path: ellipse(120% 100% at 50% 100%);">
+        <div class="fade-in" style="background: transparent; padding: 60px 40px; border-radius: 25px 25px 0 0; text-align: center; margin-bottom: 60px; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);">
             <div style="text-align: center; margin: 40px 0;">
                 <h2 style="color: #2c3e50; font-family: 'Dancing Script', cursive; font-size: 52px; font-weight: 700; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1); letter-spacing: 2px;">True Story</h2>
             </div>
