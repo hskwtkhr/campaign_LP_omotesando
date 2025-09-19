@@ -8,11 +8,8 @@
     <meta name="description" content="年間症例2万件超！開院14年の実績と信頼。6月限定キャンペーン実施中。ヒアルロン酸・ボトックス・アートメイクなど人気施術が特別価格。無料カウンセリング受付中">
     
     <!-- ヒーローセクション画像プリロード -->
-    <link rel="preload" href="imgs/ELM15.jpg" as="image">
-    <link rel="preload" href="imgs/dr_shichiri_N.png" as="image">
-    <link rel="preload" href="imgs/star_1.png" as="image">
-    <link rel="preload" href="imgs/star_2.png" as="image">
-    <link rel="preload" href="imgs/star_3.png" as="image">
+    <link rel="preload" href="imgs/LP_top_1.jpg" as="image">
+    <link rel="preload" href="imgs/LP_top_2.jpg" as="image">
     
     <!-- フォントプリロード -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Martel+Sans:wght@400;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho+B1:wght@400&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -220,17 +217,6 @@
                 background: transparent;
             }
             
-            /* ヒーローセクションは背景を保持 */
-            .main-content .hero {
-                position: relative;
-                z-index: 10;
-                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/ELM15.jpg');
-                background-size: cover;
-                background-position: center;
-                width: 100vw;
-                margin-left: calc(-50vw + 50%);
-                margin-right: calc(-50vw + 50%);
-            }
             
             /* フッターは背景を保持 */
             .main-content footer {
@@ -1641,10 +1627,10 @@
     <!-- ナビゲーションボタン -->
     <section class="section" style="padding: 40px 20px; background: #f8f9fa;">
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 100%; margin: 0 auto;">
-            <a href="#campaign" style="display: block; background: #ffffff; color: #333; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e9ecef;" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'; this.style.color='#333';">キャンペーン</a>
-            <a href="#special" style="display: block; background: #ffffff; color: #333; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e9ecef;" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'; this.style.color='#333';">スペシャルキャンペーン</a>
-            <a href="#recommend" style="display: block; background: #ffffff; color: #333; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e9ecef;" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'; this.style.color='#333';">おすすめ施術</a>
-            <a href="#about" style="display: block; background: #ffffff; color: #333; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e9ecef;" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'; this.style.color='#333';">当院について</a>
+            <a href="#campaign" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">キャンペーン</a>
+            <a href="#special" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">スペシャルキャンペーン</a>
+            <a href="#recommend" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">おすすめ施術</a>
+            <a href="#about" style="display: block; background: url('imgs/AdobeStock_433612477_marble.jpeg') center/cover; color: #1a1a1a; padding: 20px; border-radius: 10px; text-decoration: none; text-align: center; font-weight: 700; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.3); text-shadow: 1px 1px 3px rgba(255,255,255,0.8);" onmouseover="this.style.transform='translateY(-5px) scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)'; this.style.color='#ff6b6b';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'; this.style.color='#1a1a1a';">当院について</a>
         </div>
     </section>
     
