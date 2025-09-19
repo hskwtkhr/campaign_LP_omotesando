@@ -482,6 +482,20 @@
         
         /* スマホ版での最適化（768px未満） */
         @media (max-width: 767px) {
+            /* True Storyセクションのスマホ版調整 */
+            #story .fade-in {
+                box-shadow: none !important;
+                margin-left: calc(-50vw + 50%) !important;
+                margin-right: calc(-50vw + 50%) !important;
+                width: 100vw !important;
+                padding: 60px 20px !important;
+            }
+            
+            #story .fade-in > div {
+                max-width: none !important;
+                padding: 30px 20px !important;
+            }
+            
             body {
                 display: block !important;
                 justify-content: initial !important;
