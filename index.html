@@ -257,14 +257,22 @@
         /* ヒーローセクション */
         .hero {
             position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            z-index: 10;
             width: 100vw;
             margin-left: calc(-50vw + 50%);
             margin-right: calc(-50vw + 50%);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* 上部セクション */
+        .hero-top-section {
+            position: relative;
+            height: 70vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .hero-main-image {
@@ -283,7 +291,7 @@
             object-position: center;
         }
         
-        .hero::before {
+        .hero-top-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -294,29 +302,24 @@
             z-index: 2;
         }
         
-        .hero-content {
+        .hero-overlay-content {
             position: relative;
             z-index: 3;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 60px 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            width: 100%;
-        }
-        
-        .hero-left {
+            text-align: center;
             color: white;
-            text-align: left;
         }
         
-        .hero-right {
+        /* 下部セクション */
+        .hero-bottom-section {
+            background: #f8f9fa;
+            padding: 60px 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px;
+            gap: 40px;
         }
         
         .hero-badge {
@@ -432,12 +435,13 @@
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            max-width: 500px;
+            width: 100%;
         }
         
         .hero-doctor-image {
             width: 100%;
-            max-width: 400px;
             height: auto;
             display: block;
         }
@@ -454,14 +458,14 @@
         }
         
         .doctor-info-overlay h3 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 700;
             margin-bottom: 8px;
             font-family: 'Zen Maru Gothic', sans-serif;
         }
         
         .doctor-info-overlay p {
-            font-size: 14px;
+            font-size: 16px;
             opacity: 0.9;
             line-height: 1.4;
         }
@@ -553,18 +557,21 @@
         
         /* タブレット版での最適化（768px〜1023px） */
         @media (min-width: 768px) and (max-width: 1023px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
+            .hero-top-section {
+                height: 60vh;
+                min-height: 500px;
             }
             
-            .hero-left {
-                text-align: center;
+            .hero-overlay-content {
+                padding: 40px 30px;
             }
             
-            .hero-cta {
-                justify-content: center;
+            .hero-bottom-section {
+                padding: 40px 30px;
+            }
+            
+            .hero-image-container {
+                max-width: 400px;
             }
         }
         
@@ -593,20 +600,18 @@
                 background: transparent !important;
             }
             
-            .hero {
-                min-height: 100vh;
-                padding: 0;
+            .hero-top-section {
+                height: 50vh;
+                min-height: 400px;
             }
             
-            .hero-content {
-                grid-template-columns: 1fr;
+            .hero-overlay-content {
+                padding: 30px 20px;
+            }
+            
+            .hero-bottom-section {
+                padding: 30px 20px;
                 gap: 30px;
-                padding: 40px 20px;
-                text-align: center;
-            }
-            
-            .hero-left {
-                text-align: center;
             }
             
             .hero-badge {
@@ -630,6 +635,14 @@
             .hero-image-container {
                 max-width: 300px;
                 margin: 0 auto;
+            }
+            
+            .doctor-info-overlay h3 {
+                font-size: 16px;
+            }
+            
+            .doctor-info-overlay p {
+                font-size: 14px;
             }
             
             
@@ -1790,14 +1803,14 @@
     <div class="main-content">
         <!-- ヒーローセクション -->
     <section class="hero">
-        <!-- メイン画像 -->
-        <div class="hero-main-image">
-            <img src="imgs/LP_top_1.jpg" alt="エルムクリニック神戸院 メインビジュアル" class="hero-bg-image">
-        </div>
-        
-        <!-- オーバーレイコンテンツ -->
-        <div class="hero-content">
-            <div class="hero-left">
+        <!-- 上部画像エリア -->
+        <div class="hero-top-section">
+            <div class="hero-main-image">
+                <img src="imgs/LP_top_1.jpg" alt="エルムクリニック神戸院 メインビジュアル" class="hero-bg-image">
+            </div>
+            
+            <!-- オーバーレイコンテンツ -->
+            <div class="hero-overlay-content">
                 <div class="hero-badge">6月限定キャンペーン実施中</div>
                 <h1 class="hero-title">
                     <span class="hero-subtitle-text">神戸で選ばれる美容皮膚科</span><br>
@@ -1830,21 +1843,22 @@
                     </a>
                 </div>
             </div>
+        </div>
+        
+        <!-- 下部画像エリア -->
+        <div class="hero-bottom-section">
+            <div class="hero-image-container">
+                <img src="imgs/LP_top_2.jpg" alt="エルムクリニック神戸院 院長" class="hero-doctor-image">
+                <div class="doctor-info-overlay">
+                    <h3>院長：七里 阿寿美</h3>
+                    <p>小児科専門医による<br>安全で確実な治療</p>
+                </div>
+            </div>
             
-            <div class="hero-right">
-                <div class="hero-image-container">
-                    <img src="imgs/LP_top_2.jpg" alt="エルムクリニック神戸院 院長" class="hero-doctor-image">
-                    <div class="doctor-info-overlay">
-                        <h3>院長：七里 阿寿美</h3>
-                        <p>小児科専門医による<br>安全で確実な治療</p>
-                    </div>
-                </div>
-                
-                <div class="star-images">
-                    <img src="imgs/star_1.png" alt="エルムクリニック神戸院 評価スター1" class="star-image">
-                    <img src="imgs/star_2.png" alt="エルムクリニック神戸院 評価スター2" class="star-image">
-                    <img src="imgs/star_3.png" alt="エルムクリニック神戸院 評価スター3" class="star-image">
-                </div>
+            <div class="star-images">
+                <img src="imgs/star_1.png" alt="エルムクリニック神戸院 評価スター1" class="star-image">
+                <img src="imgs/star_2.png" alt="エルムクリニック神戸院 評価スター2" class="star-image">
+                <img src="imgs/star_3.png" alt="エルムクリニック神戸院 評価スター3" class="star-image">
             </div>
         </div>
     </section>
