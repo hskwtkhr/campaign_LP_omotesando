@@ -729,11 +729,16 @@
                 z-index: 10 !important;
             }
             
+            /* 診療の流れセクション専用の調整 */
+            #flow.section {
+                padding: 40px 20px !important;
+            }
+            
             .flow-steps {
                 flex-direction: column;
                 gap: 10px;
-                margin: 0 20px;
-                max-width: calc(100% - 40px);
+                margin: 0;
+                max-width: 100%;
             }
             
             .flow-step {
@@ -2172,7 +2177,7 @@
     </section>
 
     <!-- 診療の流れ -->
-    <section class="section">
+    <section class="section" id="flow">
         <h2 class="section-title">診療の流れ</h2>
         <p class="section-subtitle">初回から施術まで、安心してお受けいただけるよう丁寧にサポートします</p>
         
