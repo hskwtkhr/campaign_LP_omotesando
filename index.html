@@ -532,8 +532,20 @@
             /* Story下部の写真とコピーを縦並びに */
             div[style*="display: flex; align-items: flex-end; gap: 30px"] {
                 flex-direction: column !important;
-                align-items: flex-start !important;
+                align-items: center !important;
                 gap: 20px !important;
+            }
+            
+            /* スマホ版で写真を大きめにしてセンター配置 */
+            div[style*="display: flex; align-items: flex-end; gap: 30px"] > div:first-child {
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+            }
+            
+            div[style*="display: flex; align-items: flex-end; gap: 30px"] img {
+                width: 280px !important;
+                height: auto !important;
             }
             
             body {
