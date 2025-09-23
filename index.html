@@ -525,8 +525,19 @@
                 margin: 0 !important;
             }
             
-            /* 本文の左右余白を完全に削除 - インラインスタイルを強制上書き */
-            #story p[style*="max-width: 800px"] {
+            /* 本文の左右余白を完全に削除 - 全てのpタグを対象 */
+            #story p {
+                font-size: 16px !important;
+                line-height: 1.8 !important;
+                max-width: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+            }
+            
+            /* インラインスタイルを強制上書き */
+            #story p[style] {
                 font-size: 16px !important;
                 line-height: 1.8 !important;
                 max-width: none !important;
