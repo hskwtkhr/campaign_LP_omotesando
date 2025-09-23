@@ -600,6 +600,22 @@
                 padding: 60px 20px !important;
             }
             
+            /* スマホ版のみ：美しくなりたいタイトルに改行を追加 */
+            h3[style*="color: #ff6b6b"][style*="font-family: 'Shippori Mincho B1'"] {
+                white-space: pre-line !important;
+            }
+            
+            h3[style*="color: #ff6b6b"][style*="font-family: 'Shippori Mincho B1'"]::before {
+                content: "あなたの\A「美しくなりたい」\Aという想いを実現します" !important;
+                white-space: pre-line !important;
+                display: block !important;
+            }
+            
+            h3[style*="color: #ff6b6b"][style*="font-family: 'Shippori Mincho B1'"] {
+                font-size: 0 !important;
+                line-height: 1.4 !important;
+            }
+            
             /* ナビゲーションボタンのスマホ版調整 */
             .section a[href="#campaign"],
             .section a[href="#special"] {
