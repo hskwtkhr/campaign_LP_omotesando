@@ -504,36 +504,91 @@
         
         /* スマホ版での最適化（768px未満） */
         @media (max-width: 767px) {
-            /* True Storyセクション - 新しいスマホ版CSS（シンプル） */
-            
-            /* 外側コンテナ - ピンク背景を5px表示 */
+            /* True Storyセクションのスマホ版調整 - 完全リセット */
             #story .fade-in {
+                box-shadow: none !important;
                 margin-left: calc(-50vw + 50%) !important;
                 margin-right: calc(-50vw + 50%) !important;
                 width: 100vw !important;
                 padding: 20px 5px !important;
             }
             
-            /* 白い背景コンテナ - 余白なし */
+            /* 白い背景コンテナのpaddingを5pxに設定 */
             #story .fade-in > div[style*="background: rgba(255, 255, 255, 0.9)"] {
-                padding: 0 !important;
+                padding: 5px !important;
                 margin: 0 !important;
             }
             
-            /* 本文コンテナ - 余白なし */
+            /* 本文コンテナのpaddingを5pxに設定 */
             #story .fade-in > div[style*="background: rgba(255, 255, 255, 0.7)"] {
-                padding: 0 !important;
+                padding: 5px !important;
                 margin: 0 !important;
             }
             
-            /* 本文pタグ - 余白完全削除 */
+            /* 本文の左右余白を完全に削除 - 全てのpタグを対象 */
             #story p {
                 font-size: 16px !important;
                 line-height: 1.8 !important;
-                margin: 0 0 20px 0 !important;
+                max-width: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
                 padding: 0 !important;
                 width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* インラインスタイルを強制上書き */
+            #story p[style] {
+                font-size: 16px !important;
+                line-height: 1.8 !important;
                 max-width: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* より強力なセレクターで上書き */
+            #story div[style*="background: rgba(255, 255, 255, 0.7)"] p {
+                font-size: 16px !important;
+                line-height: 1.8 !important;
+                max-width: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* インラインスタイルを強制上書き - 最高優先度 */
+            #story p[style*="max-width"] {
+                font-size: 16px !important;
+                line-height: 1.8 !important;
+                max-width: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* 全てのpタグを強制上書き */
+            #story .fade-in p {
+                font-size: 16px !important;
+                line-height: 1.8 !important;
+                max-width: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* ハイライト部分の余白も調整 */
+            #story div[style*="background: linear-gradient"] {
+                margin: 10px 5px !important;
+                padding: 15px !important;
             }
             
             /* 美しくなりたいコーナーのスマホ版余白調整 */
