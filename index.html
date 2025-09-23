@@ -504,87 +504,37 @@
         
         /* スマホ版での最適化（768px未満） */
         @media (max-width: 767px) {
-            /* True Storyセクションのスマホ用CSS - 実験用に削除 */
-            /* 後で戻すためにコメントアウト */
-            /*
+            /* True Storyセクション - 新しいスマホ版CSS（シンプル） */
+            
+            /* 外側コンテナ - ピンク背景を5px表示 */
             #story .fade-in {
-                box-shadow: none !important;
                 margin-left: calc(-50vw + 50%) !important;
                 margin-right: calc(-50vw + 50%) !important;
                 width: 100vw !important;
                 padding: 20px 5px !important;
             }
             
+            /* 白い背景コンテナ - 余白なし */
             #story .fade-in > div[style*="background: rgba(255, 255, 255, 0.9)"] {
                 padding: 0 !important;
                 margin: 0 !important;
             }
             
+            /* 本文コンテナ - 余白なし */
             #story .fade-in > div[style*="background: rgba(255, 255, 255, 0.7)"] {
                 padding: 0 !important;
                 margin: 0 !important;
             }
             
+            /* 本文pタグ - 余白完全削除 */
             #story p {
                 font-size: 16px !important;
                 line-height: 1.8 !important;
-                max-width: none !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
+                margin: 0 0 20px 0 !important;
                 padding: 0 !important;
                 width: 100% !important;
-                box-sizing: border-box !important;
-            }
-            
-            #story p[style] {
-                font-size: 16px !important;
-                line-height: 1.8 !important;
                 max-width: none !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
             }
-            
-            #story div[style*="background: rgba(255, 255, 255, 0.7)"] p {
-                font-size: 16px !important;
-                line-height: 1.8 !important;
-                max-width: none !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
-            
-            #story p[style*="max-width"] {
-                font-size: 16px !important;
-                line-height: 1.8 !important;
-                max-width: none !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
-            
-            #story .fade-in p {
-                font-size: 16px !important;
-                line-height: 1.8 !important;
-                max-width: none !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
-            
-            #story div[style*="background: linear-gradient"] {
-                margin: 10px 5px !important;
-                padding: 15px !important;
-            }
-            */
             
             /* 美しくなりたいコーナーのスマホ版余白調整 */
             div[style*="background: url('imgs/AdobeStock_433612477_marble.jpeg')"] {
