@@ -534,6 +534,7 @@
                 margin-right: 0 !important;
                 padding: 0 !important;
                 width: 100% !important;
+                background-color: red !important;
             }
             
             /* インラインスタイルを強制上書き */
@@ -545,6 +546,21 @@
                 margin-right: 0 !important;
                 padding: 0 !important;
                 width: 100% !important;
+                background-color: blue !important;
+            }
+            
+            /* 白い背景コンテナを緑に */
+            #story .fade-in > div[style*="background: rgba(255, 255, 255, 0.9)"] {
+                padding: 5px !important;
+                margin: 0 !important;
+                background-color: green !important;
+            }
+            
+            /* 本文コンテナを黄色に */
+            #story .fade-in > div[style*="background: rgba(255, 255, 255, 0.7)"] {
+                padding: 5px !important;
+                margin: 0 !important;
+                background-color: yellow !important;
             }
             
             /* ハイライト部分の余白も調整 */
