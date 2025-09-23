@@ -564,6 +564,32 @@
                 background-color: purple !important;
             }
             
+            /* インラインスタイルを強制上書き - 最高優先度 */
+            #story p[style*="max-width"] {
+                font-size: 16px !important;
+                line-height: 1.8 !important;
+                max-width: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                background-color: orange !important;
+            }
+            
+            /* 全てのpタグを強制上書き */
+            #story .fade-in p {
+                font-size: 16px !important;
+                line-height: 1.8 !important;
+                max-width: none !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                background-color: cyan !important;
+            }
+            
             /* 白い背景コンテナを緑に */
             #story .fade-in > div[style*="background: rgba(255, 255, 255, 0.9)"] {
                 padding: 5px !important;
