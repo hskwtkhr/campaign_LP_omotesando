@@ -611,21 +611,24 @@
                 margin-bottom: 40px !important;
             }
             
-            /* ナビゲーションボタンのスマホ版調整 */
+            /* ナビゲーションボタンのスマホ版調整 - 全てのボタンに適用 */
             .section a[href="#campaign"],
-            .section a[href="#special"] {
+            .section a[href="#special"],
+            .section a[href="#recommend"],
+            .section a[href="#about"] {
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
                 padding: 10px 20px !important;
                 min-height: 60px !important;
-                margin: 0 15px !important;
             }
             
-            /* ボタンコンテナのスマホ版調整 */
-            .section {
+            /* ボタンコンテナのスマホ版調整 - 左右のみ15px */
+            .section[style*="padding: 40px 20px"] {
                 padding-left: 15px !important;
                 padding-right: 15px !important;
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
             }
             
             /* ピンクのドロップシャドウを確実に削除 */
