@@ -159,7 +159,7 @@
                 bottom: 200px;
                 width: 200px;
                 z-index: 100;
-                border-radius: 15px;
+                border-radius: 0 15px 15px 0;
                 padding: 30px 20px;
                 box-shadow: 0 8px 25px rgba(0,0,0,0.15);
                 text-align: center;
@@ -176,7 +176,8 @@
             .pc-side-element.right {
                 transform: translateX(100px);
                 background: white;
-                right: 15px;
+                right: 0;
+                border-radius: 15px 0 0 15px;
             }
             
             .pc-side-element.show {
@@ -187,7 +188,7 @@
             
             .pc-side-element.left {
                 background: white;
-                left: 15px;
+                left: 0;
             }
             
             /* 広いモニター（1400px以上）での幅拡大 */
